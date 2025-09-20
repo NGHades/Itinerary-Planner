@@ -1,12 +1,14 @@
 import os
 import requests
-import google.generativeai as genai
+from google import genai
+from dotenv import load_dotenv
+
 
 # --- CONFIG ---
-OPENTRIPMAP_API_KEY = os.getenv("5ae2e3f221c38a28845f05b60f8887eacd3727cd6a9fd80fed39f192")
-OPENAI_API_KEY = os.getenv("AIzaSyCdkF2khECub_ELYEk3m1htISTcp6gQ6ik")
-
-genai.configure(api_key="AIzaSyCdkF2khECub_ELYEk3m1htISTcp6gQ6ik")
+load_dotenv()
+OPENTRIPMAP_API_KEY = os.getenv("OPENTRIPMAP_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+client=genai.Client()
 
 # --- 1. USER INPUTS (hardcoded for now) ---
 destination = "Pasadena"
@@ -19,7 +21,7 @@ month = "November"
 # --- 2. GEOCODE DESTINATION ---
 def geocode_city(city_name):
     url = f"https://api.opentripmap.com/0.1/en/places/geoname"
-    params = {"name": city_name, "apikey": "5ae2e3f221c38a28845f05b60f8887eacd3727cd6a9fd80fed39f192"}
+    params = {"name": city_name, "apikey": OPENTRIPMAP_API_KEY}
     resp = requests.get(url, params=params).json()
     return resp["lat"], resp["lon"]
 
@@ -36,7 +38,7 @@ def get_pois(lat, lon, radius=5000, limit=10):
         "lat": lat,
         "rate": 3,       # 1=low, 3=popular
         "limit": limit,
-        "apikey": "5ae2e3f221c38a28845f05b60f8887eacd3727cd6a9fd80fed39f192",
+        "apikey": OPENTRIPMAP_API_KEY,
     }
     resp = requests.get(url, params=params).json()
     pois = []
@@ -67,9 +69,10 @@ prompt = build_prompt(destination, days, pace, has_car, pois)
 
 # --- 5. CALL OPENAI ---
 def generate_itinerary(prompt) ->str:
-    model = genai.GenerativeModel("gemini-1.5-flash")
-    resp = model.generate_content(
-        f"You are a travel itinerary planner.\n{prompt}"
+
+    resp = client.models.generate_content(
+        model="gemini-2.5-flash", 
+        contents=f"You are a travel itinerary planner.\n{prompt}"
     )
     return resp.text
 
