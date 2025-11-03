@@ -1,37 +1,224 @@
-/* Reset and Base Styles */
+/* ==========================================================================
+   GLOBAL STYLES - WanderTrip Application
+   ========================================================================== */
+
+/* CSS Variables - Color Palette */
+:root {
+    /* Primary Colors */
+    --red-primary: #E54B4B;
+    --red-hover: #d63939;
+    --red-active: #c53030;
+    
+    /* WanderTrip Color Palette */
+    --cream: #FDF6E3;
+    --mint: #A8D5BA;
+    --coral: #FFB3B3;
+    --pink: #FFC0CB;
+    --light-pink: #FFE4E6;
+    
+    /* Neutrals */
+    --white: #FFFFFF;
+    --text-dark: #2C3E50;
+    --text-medium: #5A6C7D;
+    --text-light: #8B9CB5;
+    --border-light: #E8F4F8;
+    --border-medium: #D1E7DD;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.12);
+    --blue-accent: #4A90E2;
+    --time-bg: #f8f9fa;
+    
+    /* Legacy variable mapping for compatibility */
+    --primary-pink: var(--coral);
+    --background-light: var(--cream);
+    --background-card: var(--white);
+    --accent-blue: var(--blue-accent);
+    --accent-green: var(--mint);
+    --accent-orange: var(--coral);
+}
+
+/* ==========================================================================
+   RESET AND BASE STYLES
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    /* Color Palette - Inspired by the mockup */
-    --primary-pink: #f8a5c2;
-    --text-dark: #2c2c2c;
-    --text-medium: #666666;
-    --text-light: #999999;
-    --background-light: #fefefe;
-    --background-card: #ffffff;
-    --border-light: #e8e8e8;
-    --border-medium: #dddddd;
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.12);
-    --accent-blue: #4a90e2;
-    --accent-green: #7ed321;
-    --accent-orange: #f5a623;
-    --time-bg: #f8f9fa;
-}
-
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--background-light);
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Header Styles */
+/* Home page gets white background, planner gets cream */
+body.home-page {
+    background-color: var(--white);
+}
+
+body.planner-page {
+    background-color: var(--cream);
+}
+
+/* ==========================================================================
+   NAVIGATION STYLES
+   ========================================================================== */
+
+.navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand a {
+    text-decoration: none;
+}
+
+.nav-brand h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--blue-accent);
+    margin: 0;
+}
+
+/* Simple home page nav */
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: var(--red-primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: var(--red-hover);
+    transform: translateY(-1px);
+}
+
+.nav-button.active {
+    background-color: var(--red-active);
+}
+
+/* Planner page nav items */
+.nav-item {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--blue-accent);
+    background-color: var(--light-pink);
+}
+
+.nav-profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--blue-accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.profile-avatar:hover {
+    background: var(--coral);
+}
+
+/* ==========================================================================
+   MAIN CONTENT LAYOUTS
+   ========================================================================== */
+
+/* Home page main content */
+.main-content {
+    min-height: calc(100vh - 100px);
+}
+
+/* Under construction message */
+.construction-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+.construction-message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.construction-message p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    background-color: var(--red-primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var(--red-hover);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   PLANNER PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* Header Styles for Planner */
 .app-header {
     background: linear-gradient(135deg, var(--background-card) 0%, #f8f9fa 100%);
     border-bottom: 1px solid var(--border-light);
@@ -89,8 +276,8 @@ body {
     font-weight: 600;
 }
 
-/* Main Content Layout */
-.main-content {
+/* Planner Main Content Layout */
+.planner-page .main-content {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
@@ -210,7 +397,7 @@ body {
 }
 
 .day-header {
-    background: linear-gradient(135deg, var(--primary-pink), #f5a5c7);
+    background: linear-gradient(135deg, var(--coral), var(--pink));
     color: white;
     padding: 1.5rem;
     text-align: center;
@@ -383,6 +570,10 @@ body {
     background: var(--border-light);
     color: var(--text-dark);
 }
+
+/* ==========================================================================
+   LOADING AND MODAL STYLES
+   ========================================================================== */
 
 /* Loading Overlay */
 .loading-overlay {
@@ -573,9 +764,64 @@ body {
     background: #c0392b;
 }
 
-/* Responsive Design */
+/* Message Toast */
+.message-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 2000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+.message-toast.active {
+    transform: translateX(0);
+}
+
+.message-toast.success {
+    background: var(--accent-green);
+}
+
+.message-toast.error {
+    background: #e74c3c;
+}
+
+.message-toast.info {
+    background: var(--accent-blue);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
 @media (max-width: 768px) {
-    .main-content {
+    .nav-container {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .construction-message h1 {
+        font-size: 2rem;
+    }
+    
+    /* Planner specific responsive */
+    .planner-page .main-content {
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1rem;
@@ -613,7 +859,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .main-content {
+    .planner-page .main-content {
         padding: 0.5rem;
     }
     
@@ -632,35 +878,4 @@ body {
     .activity-sidebar {
         padding: 1rem;
     }
-}
-
-/* Message Toast */
-.message-toast {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    color: white;
-    font-weight: 500;
-    z-index: 2000;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 12px var(--shadow-medium);
-}
-
-.message-toast.active {
-    transform: translateX(0);
-}
-
-.message-toast.success {
-    background: var(--accent-green);
-}
-
-.message-toast.error {
-    background: #e74c3c;
-}
-
-.message-toast.info {
-    background: var(--accent-blue);
 }

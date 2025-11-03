@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Itinerary Planner</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>WanderPlan - Travel Itinerary Planner</title>
+    <link rel="stylesheet" href="../styles/global.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="planner-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <h1>WanderTrip</h1>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="planner.html" class="nav-item active">My Plan</a>
+                <a href="my-trips.html" class="nav-item">My Trips</a>
+                <a href="destinations.html" class="nav-item">Destinations</a>
+                <a href="my-account.html" class="nav-item">My Account</a>
+            </div>
+            <div class="nav-profile">
+                <div class="profile-avatar">👤</div>
+            </div>
+        </div>
+    </nav>
+
     <div class="app-container">
         <!-- Header Section -->
         <header class="app-header">
@@ -135,6 +155,6 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="../scripts/planner-app.js"></script>
 </body>
 </html>
