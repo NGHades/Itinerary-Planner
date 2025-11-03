@@ -1,6 +1,34 @@
-# Travel Itinerary Planner
+# WanderTrip - Travel Itinerary Planner
 
-A modern, interactive travel itinerary planner that generates personalized travel schedules using AI and provides a drag-and-drop interface for customization.
+A modern, interac### Design Philosophy
+
+### Backend Architecture
+- **Package-Based Organization**: Clean separation of concerns with `__init__.py` controlled imports
+- **Service Layer Pattern**: Core business logic isolated in `itinerary_service.py`
+- **Utility Modules**: Reusable components for geocoding and POI discovery
+- **Data Models**: Structured classes for type safety and validation
+- **Application Factory**: Flask app creation using factory pattern for testability
+
+### Frontend Architecture  
+- **Global CSS**: Single stylesheet for consistency across all pages
+- **Page-specific JS**: Separate JavaScript files for distinct functionality
+- **Organized Directory Structure**: Clear separation of pages, styles, scripts, and assets
+- **Scalable Architecture**: Easy to add new pages and features
+
+### Navigation Structure
+- **Simple Home Page**: Clean white background with WanderTrip branding
+- **Red Navigation Buttons**: #E54B4B color for consistent branding
+- **Four Main Sections**:
+  - **My Plan**: Access to the travel itinerary planner
+  - **My Trips**: Future feature for saved trips
+  - **Destinations**: Future feature for destination discovery
+  - **My Account**: User profile and settings
+
+### File Organization
+- **Global CSS**: Single stylesheet for consistency across all pages
+- **Page-specific JS**: Separate JavaScript files for distinct functionality
+- **Organized Directory Structure**: Clear separation of pages, styles, scripts, and assets
+- **Scalable Architecture**: Easy to add new pages and featureserary planner that generates personalized travel schedules using AI and provides a drag-and-drop interface for customization.
 
 ## Features
 
@@ -17,16 +45,61 @@ A modern, interactive travel itinerary planner that generates personalized trave
 
 ```
 Itinerary-Planner/
-├── frontend/
-│   ├── index.html          # Main HTML structure
-│   ├── styles.css          # Complete styling with travel theme
-│   ├── app.js             # JavaScript functionality
-│   └── itinerary_data.json # Generated itinerary data
-├── itinerary.py           # AI itinerary generation script
-├── app.py                 # Flask API server (optional)
-├── requirements.txt       # Python dependencies
-└── README.md             # This file
+├── backend/                        # 🎯 Backend API Package
+│   ├── __init__.py                # Package initialization and public API
+│   ├── main.py                    # Flask application factory
+│   ├── itinerary_service.py       # Core AI itinerary generation logic
+│   ├── models/
+│   │   ├── __init__.py           # Data models package
+│   │   └── itinerary_models.py   # Structured data classes (Itinerary, Activity, etc.)
+│   └── utils/
+│       ├── __init__.py           # Utilities package
+│       ├── geocoding.py          # Location services (OpenTripMap)
+│       └── poi_service.py        # Points of interest discovery
+├── frontend/                       # 🎨 Frontend Application
+│   ├── pages/                     # HTML pages
+│   │   ├── index.html            # Home page (white background with nav)
+│   │   ├── planner.html          # Travel itinerary planner interface
+│   │   ├── my-trips.html         # My trips page (under construction)
+│   │   ├── destinations.html     # Destinations page (under construction)
+│   │   └── my-account.html       # Account page (under construction)
+│   ├── styles/
+│   │   └── global.css            # Consolidated styles for all pages
+│   ├── scripts/
+│   │   ├── planner-app.js        # Planner functionality
+│   │   ├── home-app.js          # Home page scripts
+│   │   └── app.js               # Common utilities
+│   ├── assets/
+│   │   └── images/              # Static images and icons
+│   └── itinerary_data.json      # Generated itinerary data
+├── scripts/                       # 🔧 Utility Scripts
+│   └── generate_sample.py        # Standalone itinerary generation
+├── archive/                       # 📦 Archived Files
+│   ├── app.py                    # Original Flask app
+│   ├── itinerary.py              # Original monolithic script
+│   └── itinerary_old.py          # Previous version backup
+├── main.py                        # 🚀 Main entry point for Flask API
+├── requirements.txt               # Python dependencies
+├── .env                          # Environment variables (API keys)
+└── README.md                     # This file
 ```
+
+## Design Philosophy
+
+### Navigation Structure
+- **Simple Home Page**: Clean white background with WanderTrip branding
+- **Red Navigation Buttons**: #E54B4B color for consistent branding
+- **Four Main Sections**:
+  - **My Plan**: Access to the travel itinerary planner
+  - **My Trips**: Future feature for saved trips
+  - **Destinations**: Future feature for destination discovery
+  - **My Account**: User profile and settings
+
+### File Organization
+- **Global CSS**: Single stylesheet for consistency across all pages
+- **Page-specific JS**: Separate JavaScript files for distinct functionality
+- **Organized Directory Structure**: Clear separation of pages, styles, scripts, and assets
+- **Scalable Architecture**: Easy to add new pages and features
 
 ## Setup Instructions
 
@@ -60,8 +133,11 @@ OPENTRIPMAP_API_KEY=your_opentripmap_api_key_here
 ### 3. Generate Initial Data
 
 ```bash
-# Generate sample itinerary data
-python itinerary.py
+# Option 1: Using the backend service directly
+python scripts/generate_sample.py
+
+# Option 2: Using the original standalone script (now archived)
+python archive/itinerary.py
 ```
 
 This will create `frontend/itinerary_data.json` with AI-generated itinerary data.
@@ -75,7 +151,7 @@ You have two options:
 cd frontend
 python -m http.server 8000
 ```
-Visit: http://localhost:8000
+Visit: http://localhost:8000/pages/
 
 #### Option B: Full API Server (Recommended)
 ```bash
@@ -83,12 +159,13 @@ Visit: http://localhost:8000
 pip install flask flask-cors
 
 # Start the API server
-python app.py
+python main.py
 
 # In another terminal, serve the frontend
 cd frontend
 python -m http.server 8000
 ```
+Visit: http://localhost:8000/pages/
 
 ## Usage Guide
 
