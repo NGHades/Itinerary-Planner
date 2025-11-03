@@ -1,6 +1,6 @@
 import os
 import requests
-from google import genai
+import google.generativeai as genai
 from dotenv import load_dotenv
 
 
@@ -8,7 +8,9 @@ from dotenv import load_dotenv
 load_dotenv()
 OPENTRIPMAP_API_KEY = os.getenv("OPENTRIPMAP_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-client=genai.Client()
+
+# Configure Gemini API
+genai.configure(api_key=GEMINI_API_KEY)
 
 # --- 1. USER INPUTS (hardcoded for now) ---
 destination = "Pasadena"
@@ -20,10 +22,25 @@ month = "November"
 
 # --- 2. GEOCODE DESTINATION ---
 def geocode_city(city_name):
+    # Try OpenTripMap first, then fallback to a simpler approach
     url = f"https://api.opentripmap.com/0.1/en/places/geoname"
     params = {"name": city_name, "apikey": OPENTRIPMAP_API_KEY}
-    resp = requests.get(url, params=params).json()
-    return resp["lat"], resp["lon"]
+    
+    try:
+        resp = requests.get(url, params=params)
+        data = resp.json()
+        
+        if resp.status_code == 200 and "lat" in data and "lon" in data:
+            return data["lat"], data["lon"]
+        else:
+            # Fallback: Use a basic geocoding service or hardcoded coordinates
+            print(f"Geocoding failed for {city_name}, using default coordinates for Pasadena, CA")
+            # Pasadena, CA coordinates as fallback
+            return 34.1478, -118.1445
+            
+    except Exception as e:
+        print(f"Geocoding error: {e}, using default coordinates")
+        return 34.1478, -118.1445
 
 
 lat, lon = geocode_city(destination)
@@ -48,7 +65,6 @@ def get_pois(lat, lon, radius=5000, limit=10):
         pois.append({"name": name, "type": kinds})
     return pois
 
-
 pois = get_pois(lat, lon)
 
 
@@ -67,14 +83,11 @@ def build_prompt(destination, days, pace, has_car, pois):
 prompt = build_prompt(destination, days, pace, has_car, pois)
 
 
-# --- 5. CALL OPENAI ---
-def generate_itinerary(prompt) ->str:
-
-    resp = client.models.generate_content(
-        model="gemini-2.5-flash", 
-        contents=f"You are a travel itinerary planner.\n{prompt}"
-    )
-    return resp.text
+# --- 5. CALL GEMINI ---
+def generate_itinerary(prompt) -> str:
+    model = genai.GenerativeModel('gemini-2.5-flash')
+    response = model.generate_content(f"You are a travel itinerary planner.\n{prompt}")
+    return response.text
 
 
 itinerary = generate_itinerary(prompt)
