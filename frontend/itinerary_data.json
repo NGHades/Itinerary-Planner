@@ -1,0 +1,229 @@
+{
+  "destination": "Pasadena",
+  "startDate": "Nov 8, 2024",
+  "days": [
+    {
+      "dayNumber": 1,
+      "date": "Nov 8, 2024",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Arrival, Hotel Check-in & Breakfast",
+            "description": "Arrive in Pasadena, check into your accommodation, and enjoy a delicious breakfast at a local cafe like The Great Maple or Lavender & Honey Espresso Bar.",
+            "id": "day1_morning_0"
+          },
+          {
+            "time": "10:30",
+            "activity": "Explore The Gamble House",
+            "description": "Step back in time at this masterpiece of American Arts and Crafts architecture. Take a docent-led tour to appreciate its intricate design and historical significance. (Purchase tickets in advance).",
+            "id": "day1_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Lunch in Old Pasadena",
+            "description": "Head to Old Pasadena and grab lunch at one of its many diverse eateries. Consider options like Mercado Pasadena for Mexican cuisine or The Kitchen for modern American fare.",
+            "id": "day1_afternoon_0"
+          },
+          {
+            "time": "14:00",
+            "activity": "Stroll & Shop Old Pasadena",
+            "description": "Immerse yourself in the charming historic district. Explore boutique shops, art galleries, and admire the beautiful 19th-century architecture. Don't miss One Colorado for unique finds.",
+            "id": "day1_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "18:30",
+            "activity": "Dinner in Old Pasadena",
+            "description": "Enjoy a delightful dinner experience in Old Pasadena. Suggestions include Union for modern Italian, Edwin Mills by Equator for gastropub fare, or Maestro for refined Mexican.",
+            "id": "day1_evening_0"
+          },
+          {
+            "time": "20:30",
+            "activity": "Evening Drink & Relax",
+            "description": "Wind down with a post-dinner drink at a cozy bar in Old Pasadena, such as The Speakeasy at the Edison or King's Row Gastropub.",
+            "id": "day1_evening_1"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 2,
+      "date": "Nov 9, 2024",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast at a Local Cafe",
+            "description": "Grab a quick and delicious breakfast to fuel your day. Try Urth Caff\u00e9 for organic coffee and breakfast items or Little Flower Candy Co. for pastries.",
+            "id": "day2_morning_0"
+          },
+          {
+            "time": "10:00",
+            "activity": "Immerse in The Huntington Library, Art Museum, and Botanical Gardens",
+            "description": "Spend the better part of your day exploring this world-renowned institution. Wander through stunning themed gardens (Japanese, Chinese, Desert, Rose), admire exquisite art collections, and delve into rare books.",
+            "id": "day2_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "13:00",
+            "activity": "Lunch at The Huntington or nearby",
+            "description": "Enjoy lunch at one of the cafes within The Huntington (such as the Rose Garden Tea Room or Red Car coffee shop) or head to a nearby spot outside the grounds.",
+            "id": "day2_afternoon_0"
+          },
+          {
+            "time": "14:30",
+            "activity": "Continue Exploring The Huntington",
+            "description": "There's so much to see! Dedicate more time to specific gardens or art galleries that piqued your interest, ensuring a moderate pace to enjoy every detail.",
+            "id": "day2_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "18:30",
+            "activity": "Dinner on South Lake Avenue",
+            "description": "Experience the sophisticated dining scene along South Lake Avenue. Choices range from True Food Kitchen for healthy options to The Luggage Room Pizzeria for gourmet pizza.",
+            "id": "day2_evening_0"
+          },
+          {
+            "time": "20:00",
+            "activity": "Pasadena Playhouse Performance (Optional)",
+            "description": "Check the schedule for a live theater performance at the historic Pasadena Playhouse, a regional landmark (requires advance booking).",
+            "id": "day2_evening_1"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 3,
+      "date": "Nov 10, 2024",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast and Hotel Check-out",
+            "description": "Enjoy a final Pasadena breakfast. Consider a spot like Millie's Cafe for classic American diner fare, then check out from your hotel.",
+            "id": "day3_morning_0"
+          },
+          {
+            "time": "10:00",
+            "activity": "Visit the Norton Simon Museum",
+            "description": "Discover a magnificent collection of European art from the Renaissance to the 20th century, as well as an extensive Asian art collection, all housed in a beautifully designed space.",
+            "id": "day3_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Pasadena City Hall & Lunch",
+            "description": "Take a self-guided walk around the stunning Pasadena City Hall, admiring its Spanish Colonial Revival architecture. Then, enjoy a casual lunch at a cafe near the civic center.",
+            "id": "day3_afternoon_0"
+          },
+          {
+            "time": "14:00",
+            "activity": "Relax at Arlington Garden",
+            "description": "Enjoy a tranquil stroll through Arlington Garden, Pasadena's only botanical garden dedicated to water-wise gardening. It's a peaceful oasis perfect for reflection.",
+            "id": "day3_afternoon_1"
+          },
+          {
+            "time": "15:30",
+            "activity": "Departure from Pasadena",
+            "description": "Begin your journey home or to your next destination, filled with memories of Pasadena's beauty and culture.",
+            "id": "day3_afternoon_2"
+          }
+        ],
+        "evening": []
+      }
+    }
+  ],
+  "additionalActivities": [
+    {
+      "id": "extra_activity_0",
+      "activity": "Rose Bowl Stadium Tour",
+      "description": "Take a guided tour of the iconic Rose Bowl Stadium, home of the annual Rose Bowl Game. Learn about its rich history and explore areas usually off-limits to the public. (Check tour availability and schedule).",
+      "duration": "1.5-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_1",
+      "activity": "Rose Bowl Flea Market (2nd Sunday of the month)",
+      "description": "If your visit aligns, experience one of the largest and most famous flea markets in the world, held on the second Sunday of each month. A treasure trove of antiques, vintage finds, and unique goods.",
+      "duration": "3-4 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_2",
+      "activity": "Visit Descanso Gardens",
+      "description": "A short drive from Pasadena, Descanso Gardens offers stunning camellia collections, a rose garden, and a unique Enchanted Forest of Light installation during the holiday season (check November schedule).",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_3",
+      "activity": "Hiking at Eaton Canyon Natural Area & Falls",
+      "description": "Enjoy a moderate hike through a scenic canyon leading to a beautiful 40-foot waterfall. A refreshing outdoor activity perfect for nature lovers. (Check trail conditions beforehand).",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_4",
+      "activity": "Explore California Institute of Technology (Caltech) Campus",
+      "description": "Wander the beautiful and historic campus of Caltech, known for its stunning architecture and significant scientific contributions. See notable buildings and serene courtyards.",
+      "duration": "1-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_5",
+      "activity": "Shopping on South Lake Avenue",
+      "description": "Beyond Old Pasadena, explore the upscale shopping district of South Lake Avenue, featuring department stores, high-end boutiques, and diverse dining options.",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_6",
+      "activity": "Pasadena Museum of History",
+      "description": "Delve deeper into Pasadena's rich past with exhibits on local history, culture, and influential figures, housed in the historic Fenyes Mansion.",
+      "duration": "1.5-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_7",
+      "activity": "Wine Tasting at a Local Winery/Bar",
+      "description": "Enjoy a relaxed afternoon or evening sampling local or regional wines at one of Pasadena's charming wine bars like The Raymond 1886 or Vertical Wine Bistro.",
+      "duration": "1.5-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_8",
+      "activity": "Cooking Class at Sur La Table (Old Pasadena)",
+      "description": "Participate in a hands-on cooking class focusing on various cuisines or techniques. A fun and interactive way to experience local culinary delights. (Check schedule and book in advance).",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_9",
+      "activity": "Scenic Drive to Mount Wilson Observatory",
+      "description": "Take a breathtaking drive up to Mount Wilson Observatory for panoramic views of the Los Angeles basin and the Pacific Ocean. Explore the historic telescopes and visitor center.",
+      "duration": "3-4 hours (including drive)",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_10",
+      "activity": "Rent Bicycles and Explore Arroyo Seco",
+      "description": "Rent bicycles and explore the scenic trails of the Arroyo Seco, offering a pleasant ride through natural beauty and past historical landmarks like the Colorado Street Bridge.",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_11",
+      "activity": "Pasadena Ice Skating Center (Seasonal)",
+      "description": "If open for the season in November, enjoy some recreational ice skating at a local rink \u2013 a fun activity to get into the holiday spirit.",
+      "duration": "1.5-2 hours",
+      "type": "additional"
+    }
+  ]
+}

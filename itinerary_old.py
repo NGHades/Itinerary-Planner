@@ -138,6 +138,136 @@ def build_prompt(destination, days, pace, has_car, pois):
     """
 
 
+prompt = build_prompt(destination, days, pace, has_car, pois)
+
+
+# --- 5. CALL GEMINI ---
+def generate_itinerary(prompt) -> str:
+    model = genai.GenerativeModel('gemini-2.5-flash')
+    response = model.generate_content(f"You are a travel itinerary planner.\n{prompt}")
+    return response.text
+
+
+# --- 6. PARSE ITINERARY TO JSON ---
+def parse_itinerary_to_json(itinerary_text, destination, start_date="Feb 7, 2025"):
+    """Parse the generated itinerary text into structured JSON format"""
+    try:
+        # Parse start date
+        start = datetime.strptime(start_date, "%b %d, %Y")
+        
+        # Initialize the JSON structure
+        itinerary_json = {
+            "destination": destination,
+            "startDate": start_date,
+            "days": []
+        }
+        
+        # Split by days
+        day_sections = re.split(r'Day \d+', itinerary_text)
+        day_matches = re.findall(r'Day (\d+)', itinerary_text)
+        
+        for i, day_match in enumerate(day_matches):
+            if i + 1 < len(day_sections):
+                day_content = day_sections[i + 1]
+                day_number = int(day_match)
+                current_date = start + timedelta(days=day_number - 1)
+                
+                day_data = {
+                    "dayNumber": day_number,
+                    "date": current_date.strftime("%b %d, %Y"),
+                    "periods": {
+                        "morning": [],
+                        "afternoon": [],
+                        "evening": []
+                    }
+                }
+                
+                # Parse activities by time period
+                current_period = None
+                lines = day_content.strip().split('\n')
+                
+                for line in lines:
+                    line = line.strip()
+                    if line.lower().startswith('morning'):
+                        current_period = 'morning'
+                    elif line.lower().startswith('afternoon'):
+                        current_period = 'afternoon'
+                    elif line.lower().startswith('evening'):
+                        current_period = 'evening'
+                    elif line.startswith('-') and current_period:
+                        # Parse activity line: "- 08:00 - Activity Name - Description"
+                        activity_match = re.match(r'-\s*(\d{2}:\d{2})\s*-\s*([^-]+)(?:-\s*(.+))?', line)
+                        if activity_match:
+                            time = activity_match.group(1)
+                            activity = activity_match.group(2).strip()
+                            description = activity_match.group(3).strip() if activity_match.group(3) else ""
+                            
+                            activity_data = {
+                                "time": time,
+                                "activity": activity,
+                                "description": description,
+                                "id": f"day{day_number}_{current_period}_{len(day_data['periods'][current_period])}"
+                            }
+                            
+                            day_data["periods"][current_period].append(activity_data)
+                
+                itinerary_json["days"].append(day_data)
+        
+        return itinerary_json
+        
+    except Exception as e:
+        print(f"Error parsing itinerary: {e}")
+        # Return a fallback structure
+        return {
+            "destination": destination,
+            "startDate": start_date,
+            "days": [],
+            "error": str(e)
+        }
+
+
+# --- 7. GENERATE ADDITIONAL ACTIVITIES FOR SIDEBAR ---
+def generate_additional_activities(destination, pois):
+    """Generate additional activities that users can drag and drop"""
+    model = genai.GenerativeModel('gemini-2.5-flash')
+    poi_list = ", ".join([poi["name"] for poi in pois if poi["name"]])
+    
+    prompt = f"""
+    Generate 15-20 additional travel activities for {destination} that could be added to an itinerary.
+    Include POIs like: {poi_list}
+    
+    Format each activity as:
+    Activity Name - Brief description - Estimated duration
+    
+    Mix different types of activities: museums, restaurants, outdoor activities, shopping, cultural sites, etc.
+    Keep descriptions concise (10-15 words max).
+    """
+    
+    response = model.generate_content(prompt)
+    activities = []
+    
+    lines = response.text.strip().split('\n')
+    for i, line in enumerate(lines):
+        line = line.strip()
+        if line and not line.startswith('#'):
+            # Remove bullet points or numbers
+            line = re.sub(r'^[-•*\d+\.]\s*', '', line)
+            
+            # Parse activity format
+            parts = line.split(' - ')
+            if len(parts) >= 2:
+                activity = {
+                    "id": f"extra_activity_{i}",
+                    "activity": parts[0].strip(),
+                    "description": parts[1].strip() if len(parts) > 1 else "",
+                    "duration": parts[2].strip() if len(parts) > 2 else "1-2 hours",
+                    "type": "additional"
+                }
+                activities.append(activity)
+    
+    return activities
+
+
 # --- 5. CALL GEMINI ---
 def generate_itinerary(prompt) -> dict:
     model = genai.GenerativeModel('gemini-2.5-flash')
@@ -145,6 +275,7 @@ def generate_itinerary(prompt) -> dict:
     
     try:
         # Try to parse the response as JSON
+        import json
         # Clean the response text to extract JSON
         response_text = response.text.strip()
         
@@ -170,7 +301,6 @@ def generate_itinerary(prompt) -> dict:
         }
 
 
-# --- MAIN EXECUTION ---
 prompt = build_prompt(destination, days, pace, has_car, pois)
 itinerary_json = generate_itinerary(prompt)
 
@@ -178,7 +308,5 @@ print("=== Generated Itinerary (JSON) ===")
 print(json.dumps(itinerary_json, indent=2))
 
 # Save to a file for the frontend to use
-with open('frontend/itinerary_data.json', 'w') as f:
+with open('itinerary_data.json', 'w') as f:
     json.dump(itinerary_json, f, indent=2)
-
-print(f"\nItinerary saved to frontend/itinerary_data.json")
