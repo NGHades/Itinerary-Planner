@@ -1,50 +1,50 @@
 {
-  "destination": "Ho Chi Minh City, Vietnam",
-  "startDate": "Nov 26, 2025",
+  "destination": "Tokyo Japan",
+  "startDate": "May 22, 2026",
   "days": [
     {
       "dayNumber": 1,
-      "date": "Nov 26, 2025",
+      "date": "May 22, 2026",
       "periods": {
         "morning": [
           {
             "time": "09:00",
-            "activity": "Arrival at Tan Son Nhat International Airport (SGN)",
-            "description": "Upon arrival, meet your pre-arranged private car transfer to your hotel. Check-in and freshen up.",
+            "activity": "Arrival, Car Pickup & Hotel Check-in",
+            "description": "Arrive at Narita (NRT) or Haneda (HND) airport, pick up your rental car, and drive to your accommodation in Tokyo. Settle in and freshen up after your journey.",
             "id": "day1_morning_0"
           },
           {
-            "time": "11:00",
-            "activity": "Hotel check-in & relax",
-            "description": "Settle into your accommodation and take some time to rest after your journey.",
+            "time": "11:30",
+            "activity": "Explore Senso-ji Temple & Nakamise-dori (Asakusa)",
+            "description": "Drive to Asakusa, one of Tokyo's most traditional districts. Immerse yourselves in the spiritual ambiance of Senso-ji, Tokyo's oldest temple, and stroll along Nakamise-dori, a bustling market street leading to the temple, perfect for traditional snacks and souvenirs.",
             "id": "day1_morning_1"
           }
         ],
         "afternoon": [
           {
-            "time": "13:00",
-            "activity": "Welcome Lunch at a local restaurant",
-            "description": "Enjoy your first taste of authentic Vietnamese cuisine in a comfortable setting.",
+            "time": "13:30",
+            "activity": "Lunch in Asakusa",
+            "description": "Enjoy a delicious traditional Japanese lunch in the charming Asakusa area, perhaps sampling some local tempura or a hearty soba dish.",
             "id": "day1_afternoon_0"
           },
           {
             "time": "15:00",
-            "activity": "Explore Nguyen Hue Walking Street",
-            "description": "Take a leisurely stroll along the city's modern pedestrian boulevard, admiring the architecture and street life.",
+            "activity": "Visit Tokyo Skytree",
+            "description": "Drive to the impressive Tokyo Skytree, a prominent landmark. Ascend to one of its observation decks (Tembo Deck or Tembo Galleria) for breathtaking 360-degree panoramic views of Tokyo and beyond.",
             "id": "day1_afternoon_1"
           }
         ],
         "evening": [
           {
             "time": "19:00",
-            "activity": "Dinner at a rooftop restaurant",
-            "description": "Savor a delightful dinner with panoramic views of the city lights.",
+            "activity": "Dinner near Skytree/Asakusa",
+            "description": "Indulge in dinner at a restaurant with scenic views of the illuminated Skytree or explore the vibrant evening atmosphere of Asakusa's local eateries.",
             "id": "day1_evening_0"
           },
           {
             "time": "21:00",
-            "activity": "Relaxing drink at a sky bar",
-            "description": "Enjoy a nightcap at one of Ho Chi Minh City's vibrant sky bars.",
+            "activity": "Return to Hotel & Relax",
+            "description": "Drive back to your hotel for some well-deserved rest, reflecting on your first exciting day in Tokyo.",
             "id": "day1_evening_1"
           }
         ]
@@ -52,47 +52,47 @@
     },
     {
       "dayNumber": 2,
-      "date": "Nov 27, 2025",
+      "date": "May 23, 2026",
       "periods": {
         "morning": [
           {
-            "time": "08:30",
-            "activity": "Breakfast at hotel",
-            "description": "Start your day with a delicious breakfast.",
+            "time": "09:00",
+            "activity": "Breakfast and drive to Ueno",
+            "description": "Start your day with a satisfying breakfast at your hotel, then drive north to the cultural hub of Ueno.",
             "id": "day2_morning_0"
           },
           {
-            "time": "09:30",
-            "activity": "Visit Reunification Palace (Independence Palace)",
-            "description": "Explore the historic landmark, a symbol of the end of the Vietnam War and the reunification of the country.",
+            "time": "10:00",
+            "activity": "Explore Ueno Park & Tokyo National Museum",
+            "description": "Spend the morning at Ueno Park, a vast oasis home to numerous cultural institutions. Visit the Tokyo National Museum, Japan's largest and oldest museum, housing an extensive collection of Japanese and Asian art and artifacts.",
             "id": "day2_morning_1"
           }
         ],
         "afternoon": [
           {
-            "time": "12:30",
-            "activity": "Lunch at a nearby cafe",
-            "description": "Enjoy a casual lunch in the vicinity of the palace.",
+            "time": "13:00",
+            "activity": "Lunch in Ueno",
+            "description": "Enjoy lunch at one of the many cafes or restaurants conveniently located within or around Ueno Park.",
             "id": "day2_afternoon_0"
           },
           {
             "time": "14:30",
-            "activity": "Explore Notre-Dame Basilica & Saigon Central Post Office",
-            "description": "Visit these iconic French colonial architectural masterpieces, located just across from each other.",
+            "activity": "Ueno Zoo or other museums (Optional)",
+            "description": "Choose to visit the Ueno Zoo, famous for its giant pandas, or explore another of Ueno Park's esteemed museums, such as the National Museum of Western Art or the Tokyo Metropolitan Art Museum.",
             "id": "day2_afternoon_1"
           }
         ],
         "evening": [
           {
-            "time": "19:00",
-            "activity": "Dinner near Ben Thanh Market",
-            "description": "Dine at one of the many restaurants offering local specialties around the market.",
+            "time": "18:00",
+            "activity": "Drive to Ginza District",
+            "description": "Head south to the sophisticated and upscale Ginza district for an evening of luxury and refined experiences.",
             "id": "day2_evening_0"
           },
           {
-            "time": "20:30",
-            "activity": "Stroll through Ben Thanh Night Market",
-            "description": "Experience the bustling atmosphere of the night market, browsing souvenirs and street food stalls.",
+            "time": "19:00",
+            "activity": "Dinner & Evening Stroll in Ginza",
+            "description": "Experience Ginza's renowned dining scene, offering everything from Michelin-starred restaurants to elegant department store eateries. Afterwards, take an enchanting evening stroll to admire the district's illuminated storefronts and iconic architecture.",
             "id": "day2_evening_1"
           }
         ]
@@ -100,131 +100,143 @@
     },
     {
       "dayNumber": 3,
-      "date": "Nov 28, 2025",
+      "date": "May 24, 2026",
       "periods": {
         "morning": [
           {
-            "time": "08:30",
-            "activity": "Breakfast at hotel",
-            "description": "Fuel up for a day of exploration.",
+            "time": "09:00",
+            "activity": "Breakfast and drive to Harajuku",
+            "description": "Enjoy breakfast before driving to the vibrant and youthful Harajuku district.",
             "id": "day3_morning_0"
           },
           {
-            "time": "09:30",
-            "activity": "Visit the War Remnants Museum",
-            "description": "Gain insight into the Vietnam War through poignant exhibits and historical artifacts.",
+            "time": "10:00",
+            "activity": "Visit Meiji Jingu Shrine & Yoyogi Park",
+            "description": "Discover the tranquil beauty of Meiji Jingu Shrine, a majestic Shinto shrine dedicated to Emperor Meiji and Empress Shoken. Enjoy a peaceful walk through the surrounding forested grounds of Yoyogi Park.",
             "id": "day3_morning_1"
           }
         ],
         "afternoon": [
           {
             "time": "12:30",
-            "activity": "Lunch at a traditional Vietnamese restaurant",
-            "description": "Savor authentic Vietnamese dishes in a local eatery.",
+            "activity": "Lunch and explore Harajuku",
+            "description": "Grab a fun, casual lunch in Harajuku. Then, dive into the colorful and quirky street culture of Takeshita Street and browse the high-fashion boutiques of Omotesando, often called Tokyo's Champs-\u00c9lys\u00e9es.",
             "id": "day3_afternoon_0"
           },
           {
-            "time": "14:30",
-            "activity": "Shopping at Ben Thanh Market (daytime)",
-            "description": "Experience the vibrant daytime market, haggling for goods and sampling local snacks.",
+            "time": "15:30",
+            "activity": "Drive to Shibuya & Shibuya Crossing",
+            "description": "Head over to the bustling Shibuya district. Experience the iconic Shibuya Crossing, one of the world's busiest intersections, and find the famous Hachiko statue, a symbol of loyalty.",
             "id": "day3_afternoon_1"
           }
         ],
         "evening": [
           {
-            "time": "19:00",
-            "activity": "Dinner and Bitexco Financial Tower Skydeck",
-            "description": "Enjoy dinner followed by breathtaking 360-degree views of the city from the Saigon Skydeck.",
+            "time": "18:30",
+            "activity": "Dinner in Shibuya",
+            "description": "Enjoy dinner at one of Shibuya's incredibly diverse restaurants, ranging from lively izakayas to modern dining experiences.",
             "id": "day3_evening_0"
+          },
+          {
+            "time": "20:00",
+            "activity": "Explore Shibuya Nightlife (Optional)",
+            "description": "Optionally, explore the energetic nightlife of Shibuya, with its myriad of illuminated shops, bars, and entertainment venues.",
+            "id": "day3_evening_1"
           }
         ]
       }
     },
     {
       "dayNumber": 4,
-      "date": "Nov 29, 2025",
+      "date": "May 25, 2026",
       "periods": {
         "morning": [
           {
-            "time": "08:00",
-            "activity": "Breakfast at hotel",
-            "description": "Energize for a cultural day.",
+            "time": "09:00",
+            "activity": "Breakfast and drive to Imperial Palace",
+            "description": "Have a leisurely breakfast before driving towards the historic heart of Tokyo.",
             "id": "day4_morning_0"
           },
           {
-            "time": "09:00",
-            "activity": "Explore Cholon (Chinatown) - Thien Hau Temple",
-            "description": "Discover the bustling Cholon district, visiting the historic Thien Hau Temple with its intricate architecture.",
+            "time": "10:00",
+            "activity": "Visit Imperial Palace East Garden",
+            "description": "Explore the serene and beautifully maintained East Garden of the Imperial Palace, the former site of Edo Castle. Enjoy a peaceful walk among historical remnants and lush greenery. View the famous Nijubashi Bridge from outside the palace grounds.",
             "id": "day4_morning_1"
           }
         ],
         "afternoon": [
           {
-            "time": "12:00",
-            "activity": "Lunch in Cholon",
-            "description": "Taste delicious Chinese-Vietnamese fusion cuisine in Chinatown.",
+            "time": "13:00",
+            "activity": "Lunch near Tokyo Station",
+            "description": "Enjoy lunch at one of the numerous high-quality dining options located around the grand Tokyo Station area.",
             "id": "day4_afternoon_0"
           },
           {
-            "time": "14:00",
-            "activity": "Visit Binh Tay Market",
-            "description": "Explore the largest wholesale market in Ho Chi Minh City, offering a vibrant sensory experience.",
+            "time": "14:30",
+            "activity": "Shopping and Exploration in Ginza",
+            "description": "Return to Ginza for some dedicated retail therapy. Explore high-end department stores like Mitsukoshi and Ginza Six, browse international flagship stores, and admire the iconic Wako clock tower.",
             "id": "day4_afternoon_1"
           }
         ],
         "evening": [
           {
             "time": "19:00",
-            "activity": "Dinner and Vietnamese Water Puppet Show",
-            "description": "Enjoy dinner followed by a unique traditional Vietnamese water puppet performance.",
+            "activity": "Dinner in Ginza or Yurakucho",
+            "description": "Savor a gourmet dinner experience in Ginza, renowned for its exquisite restaurants, or explore the more lively and casual eateries and izakayas in nearby Yurakucho.",
             "id": "day4_evening_0"
+          },
+          {
+            "time": "21:00",
+            "activity": "Relax at Hotel",
+            "description": "Head back to your hotel to unwind after a day filled with history and luxurious exploration.",
+            "id": "day4_evening_1"
           }
         ]
       }
     },
     {
       "dayNumber": 5,
-      "date": "Nov 30, 2025",
+      "date": "May 26, 2026",
       "periods": {
         "morning": [
           {
-            "time": "08:30",
-            "activity": "Breakfast at hotel",
-            "description": "Enjoy a leisurely morning meal.",
+            "time": "07:30",
+            "activity": "Early drive to Tsukiji Outer Market",
+            "description": "Start your day early to beat the crowds and drive to the world-famous Tsukiji Outer Market.",
             "id": "day5_morning_0"
           },
           {
-            "time": "09:30",
-            "activity": "Visit Ho Chi Minh City Museum",
-            "description": "Learn about the city's history from ancient times to the present day in a beautiful colonial building.",
+            "time": "08:00",
+            "activity": "Explore Tsukiji Outer Market & Breakfast",
+            "description": "Immerse yourselves in the lively atmosphere of Tsukiji Outer Market. Sample incredibly fresh seafood, various street foods, and enjoy a quintessential sushi breakfast or brunch.",
             "id": "day5_morning_1"
           }
         ],
         "afternoon": [
           {
-            "time": "12:30",
-            "activity": "Lunch and explore 'Cafe Apartments'",
-            "description": "Dine in one of the unique cafes housed within the historic 'Cafe Apartments' building on Nguyen Hue.",
+            "time": "11:30",
+            "activity": "Drive to Odaiba",
+            "description": "After your market adventure, drive across the iconic Rainbow Bridge to the futuristic artificial island of Odaiba.",
             "id": "day5_afternoon_0"
           },
           {
-            "time": "15:00",
-            "activity": "Coffee culture experience",
-            "description": "Immerse yourselves in Vietnam's famous coffee culture at a local specialty coffee shop.",
+            "time": "13:00",
+            "activity": "Lunch and explore Odaiba",
+            "description": "Have lunch with picturesque waterfront views in Odaiba. Explore attractions like the giant Gundam statue at DiverCity Tokyo Plaza, Aqua City Odaiba, or relax at the waterfront park with stunning views of Tokyo Bay.",
             "id": "day5_afternoon_1"
           }
         ],
         "evening": [
           {
-            "time": "19:00",
-            "activity": "Dinner in District 1",
-            "description": "Savor a delicious dinner in the bustling heart of the city.",
+            "time": "18:30",
+            "activity": "Dinner in Odaiba",
+            "description": "Dine in Odaiba, enjoying its diverse culinary offerings, often accompanied by breathtaking nighttime views of the Tokyo skyline and Rainbow Bridge.",
             "id": "day5_evening_0"
           },
           {
-            "time": "21:00",
-            "activity": "Option to visit Bui Vien Walking Street",
-            "description": "Experience the lively atmosphere of Bui Vien, Ho Chi Minh City's backpacker street (optional, if seeking a vibrant nightlife).",
+            "time": "20:00",
+            "activity": "Enjoy Odaiba's night views",
+            "description": "Take a leisurely walk along the waterfront to admire the beautifully illuminated Rainbow Bridge, Tokyo Tower, and the replica of the Statue of Liberty.",
             "id": "day5_evening_1"
           }
         ]
@@ -232,509 +244,179 @@
     },
     {
       "dayNumber": 6,
-      "date": "Dec 01, 2025",
+      "date": "May 27, 2026",
       "periods": {
         "morning": [
           {
-            "time": "07:30",
-            "activity": "Breakfast at hotel",
-            "description": "An early start for today's excursion.",
+            "time": "09:00",
+            "activity": "Breakfast and drive to Shinjuku",
+            "description": "Enjoy breakfast, then drive to the vibrant and dynamic Shinjuku district.",
             "id": "day6_morning_0"
           },
           {
-            "time": "08:30",
-            "activity": "Full-day trip to Cu Chi Tunnels",
-            "description": "Travel by private car to explore the fascinating underground network used by Viet Cong soldiers during the war.",
+            "time": "10:00",
+            "activity": "Visit Shinjuku Gyoen National Garden",
+            "description": "Escape the urban bustle at Shinjuku Gyoen National Garden, a beautifully landscaped park featuring distinct Japanese, English, and French garden styles, perfect for a peaceful morning stroll.",
             "id": "day6_morning_1"
+          },
+          {
+            "time": "12:00",
+            "activity": "Tokyo Metropolitan Government Building",
+            "description": "Drive to the Tokyo Metropolitan Government Building for complimentary panoramic views of the sprawling city from its observation decks.",
+            "id": "day6_morning_2"
           }
         ],
         "afternoon": [
           {
-            "time": "13:00",
-            "activity": "Lunch near Cu Chi Tunnels",
-            "description": "Enjoy a local lunch after your tunnel exploration.",
+            "time": "13:30",
+            "activity": "Lunch in Shinjuku",
+            "description": "Savor a delicious lunch in Shinjuku, a district renowned for its endless and diverse dining options.",
             "id": "day6_afternoon_0"
           },
           {
-            "time": "14:30",
-            "activity": "Return transfer to Ho Chi Minh City",
-            "description": "Relax in your private car as you head back to the city.",
+            "time": "15:00",
+            "activity": "Explore Yanaka District",
+            "description": "Drive to the charming Yanaka district, one of Tokyo's few remaining 'shitamachi' (old town) areas. Stroll through the nostalgic Yanaka Ginza shopping street, visit ancient temples, and soak in the traditional, relaxed atmosphere.",
             "id": "day6_afternoon_1"
           }
         ],
         "evening": [
           {
-            "time": "19:00",
-            "activity": "Relaxing dinner in District 3",
-            "description": "Enjoy a quieter dinner in a less touristy but equally charming district.",
+            "time": "18:30",
+            "activity": "Dinner in Shinjuku",
+            "description": "Return to Shinjuku for dinner. Consider exploring Shinjuku's unique areas like Golden Gai or Omoide Yokocho (Memory Lane) for an atmospheric experience with tiny, quirky bars and eateries.",
             "id": "day6_evening_0"
+          },
+          {
+            "time": "20:00",
+            "activity": "Shinjuku night exploration (optional)",
+            "description": "Optionally, enjoy the dazzling neon lights and energetic entertainment of Shinjuku at night, from bustling shopping arcades to vibrant nightlife.",
+            "id": "day6_evening_1"
           }
         ]
       }
     },
     {
       "dayNumber": 7,
-      "date": "Dec 02, 2025",
+      "date": "May 28, 2026",
       "periods": {
         "morning": [
           {
-            "time": "08:30",
-            "activity": "Breakfast at hotel",
-            "description": "Enjoy a relaxed breakfast.",
+            "time": "09:00",
+            "activity": "Breakfast and Last-Minute Souvenir Shopping",
+            "description": "Enjoy a leisurely breakfast at your hotel. Depending on your flight schedule, head out for some last-minute souvenir shopping at a local department store basement (depachika) or revisit a favorite area.",
             "id": "day7_morning_0"
-          },
-          {
-            "time": "09:30",
-            "activity": "Vietnamese Cooking Class",
-            "description": "Learn to prepare traditional Vietnamese dishes from a local chef, often including a market visit.",
-            "id": "day7_morning_1"
           }
         ],
         "afternoon": [
           {
-            "time": "13:00",
-            "activity": "Enjoy your self-cooked lunch",
-            "description": "Taste the fruits of your labor during the cooking class.",
+            "time": "12:30",
+            "activity": "Lunch and Airport Transfer",
+            "description": "Have a final delightful Japanese lunch. Return to the hotel to pick up your luggage, then drive to Narita (NRT) or Haneda (HND) airport, allowing ample time for car return and check-in.",
             "id": "day7_afternoon_0"
-          },
-          {
-            "time": "15:00",
-            "activity": "Spa and Relaxation",
-            "description": "Indulge in a traditional Vietnamese massage or spa treatment to unwind.",
-            "id": "day7_afternoon_1"
           }
         ],
         "evening": [
           {
-            "time": "19:00",
-            "activity": "Dinner at a specialty restaurant",
-            "description": "Try a restaurant known for a particular Vietnamese dish, like Banh Xeo or Pho.",
+            "time": "17:00",
+            "activity": "Departure from Tokyo",
+            "description": "Check-in for your flight and depart from Tokyo, carrying wonderful memories of your adventure in Japan.",
             "id": "day7_evening_0"
           }
         ]
-      }
-    },
-    {
-      "dayNumber": 8,
-      "date": "Dec 03, 2025",
-      "periods": {
-        "morning": [
-          {
-            "time": "08:30",
-            "activity": "Breakfast at hotel",
-            "description": "Enjoy your morning meal.",
-            "id": "day8_morning_0"
-          },
-          {
-            "time": "09:30",
-            "activity": "Visit Jade Emperor Pagoda",
-            "description": "Explore one of Ho Chi Minh City's most atmospheric temples, adorned with intricate wood carvings.",
-            "id": "day8_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "12:30",
-            "activity": "Lunch at a vegan/vegetarian restaurant",
-            "description": "Discover the delicious vegetarian options popular in Vietnam, especially around temples.",
-            "id": "day8_afternoon_0"
-          },
-          {
-            "time": "14:30",
-            "activity": "Explore the Fine Arts Museum",
-            "description": "Housed in a beautiful colonial mansion, admire a collection of Vietnamese art.",
-            "id": "day8_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "19:00",
-            "activity": "Dinner and live music experience",
-            "description": "Enjoy dinner at a restaurant offering local or international cuisine, followed by live music at a stylish bar.",
-            "id": "day8_evening_0"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 9,
-      "date": "Dec 04, 2025",
-      "periods": {
-        "morning": [
-          {
-            "time": "07:30",
-            "activity": "Breakfast at hotel",
-            "description": "An early start for your Mekong Delta adventure.",
-            "id": "day9_morning_0"
-          },
-          {
-            "time": "08:30",
-            "activity": "Full-day Mekong Delta Tour (My Tho/Ben Tre)",
-            "description": "Embark on a private tour to the lush Mekong Delta, cruising through canals, visiting local workshops, and experiencing rural life.",
-            "id": "day9_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "13:00",
-            "activity": "Lunch on the Mekong Delta",
-            "description": "Enjoy a fresh seafood or local specialty lunch during your tour.",
-            "id": "day9_afternoon_0"
-          },
-          {
-            "time": "16:00",
-            "activity": "Return transfer to Ho Chi Minh City",
-            "description": "Relax during the drive back to the city after a day of exploration.",
-            "id": "day9_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "19:30",
-            "activity": "Casual dinner in District 1",
-            "description": "Grab a relaxed dinner after your busy day, perhaps some street food or a casual eatery.",
-            "id": "day9_evening_0"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 10,
-      "date": "Dec 05, 2025",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast at hotel",
-            "description": "Enjoy a slightly later breakfast.",
-            "id": "day10_morning_0"
-          },
-          {
-            "time": "10:00",
-            "activity": "Explore District 2 (Thao Dien)",
-            "description": "Visit the modern, expat-friendly neighborhood of Thao Dien, known for its trendy cafes, boutiques, and galleries.",
-            "id": "day10_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "12:30",
-            "activity": "Lunch at a chic cafe in Thao Dien",
-            "description": "Experience a different culinary scene with international or fusion options.",
-            "id": "day10_afternoon_0"
-          },
-          {
-            "time": "14:30",
-            "activity": "Art gallery hopping or boutique shopping in Thao Dien",
-            "description": "Discover local art and unique fashion items.",
-            "id": "day10_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "19:00",
-            "activity": "Dinner at a riverside restaurant in District 2",
-            "description": "Enjoy a peaceful dinner with views overlooking the Saigon River.",
-            "id": "day10_evening_0"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 11,
-      "date": "Dec 06, 2025",
-      "periods": {
-        "morning": [
-          {
-            "time": "08:30",
-            "activity": "Breakfast at hotel",
-            "description": "Enjoy your morning meal.",
-            "id": "day11_morning_0"
-          },
-          {
-            "time": "09:30",
-            "activity": "Visit FITO Museum (Museum of Traditional Vietnamese Medicine)",
-            "description": "Learn about the history and practice of traditional Vietnamese medicine through fascinating exhibits.",
-            "id": "day11_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "12:30",
-            "activity": "Lunch at a local eatery",
-            "description": "Savor authentic Vietnamese dishes.",
-            "id": "day11_afternoon_0"
-          },
-          {
-            "time": "14:30",
-            "activity": "Explore Tan Dinh Church (Pink Church)",
-            "description": "Visit the uniquely pink-painted Tan Dinh Church for its architectural beauty and photographic appeal.",
-            "id": "day11_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "18:30",
-            "activity": "Guided Street Food Tour",
-            "description": "Embark on a culinary adventure, sampling a variety of delicious Vietnamese street foods with a local guide.",
-            "id": "day11_evening_0"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 12,
-      "date": "Dec 07, 2025",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast at hotel",
-            "description": "A relaxing start to the day.",
-            "id": "day12_morning_0"
-          },
-          {
-            "time": "10:00",
-            "activity": "Shopping for souvenirs and local crafts",
-            "description": "Browse for unique gifts and handmade items in boutiques or craft stores.",
-            "id": "day12_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "13:00",
-            "activity": "Lunch at a favorite spot or new discovery",
-            "description": "Revisit a beloved restaurant or try a new place that caught your eye.",
-            "id": "day12_afternoon_0"
-          },
-          {
-            "time": "15:00",
-            "activity": "Leisure time / Relax by the pool",
-            "description": "Enjoy some downtime, perhaps by the hotel pool or with a good book.",
-            "id": "day12_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "19:00",
-            "activity": "Saigon River Cruise with dinner",
-            "description": "Enjoy a romantic dinner cruise along the Saigon River, taking in the city's illuminated skyline.",
-            "id": "day12_evening_0"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 13,
-      "date": "Dec 08, 2025",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast at hotel",
-            "description": "Enjoy your morning meal.",
-            "id": "day13_morning_0"
-          },
-          {
-            "time": "10:00",
-            "activity": "Visit a local wet market (e.g., Tan Dinh Market)",
-            "description": "Experience the authentic sights, sounds, and smells of a traditional Vietnamese market.",
-            "id": "day13_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "12:30",
-            "activity": "Lunch at a hidden gem restaurant",
-            "description": "Seek out a highly-rated, lesser-known local restaurant for lunch.",
-            "id": "day13_afternoon_0"
-          },
-          {
-            "time": "14:30",
-            "activity": "Explore Tao Dan Park and observe local life",
-            "description": "Take a relaxing walk through one of the city's largest parks, watching locals exercise, socialize, and play traditional games.",
-            "id": "day13_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "19:00",
-            "activity": "Dinner at a high-end Vietnamese restaurant",
-            "description": "Indulge in an exquisite farewell dinner, celebrating your trip with refined Vietnamese cuisine.",
-            "id": "day13_evening_0"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 14,
-      "date": "Dec 09, 2025",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast at hotel",
-            "description": "Enjoy your final full breakfast in Ho Chi Minh City.",
-            "id": "day14_morning_0"
-          },
-          {
-            "time": "10:00",
-            "activity": "Free time for last-minute shopping or revisiting a favorite spot",
-            "description": "Use this time to pick up any forgotten souvenirs or enjoy a final moment at a cherished location.",
-            "id": "day14_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "13:00",
-            "activity": "Leisurely lunch at a cafe",
-            "description": "Enjoy a relaxed lunch, perhaps reflecting on your journey.",
-            "id": "day14_afternoon_0"
-          },
-          {
-            "time": "15:00",
-            "activity": "Relax or get a final coffee at a unique cafe",
-            "description": "Savor a final Vietnamese coffee or find a cozy spot to relax before the evening.",
-            "id": "day14_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "19:00",
-            "activity": "Attend an A O Show at the Opera House",
-            "description": "Experience a mesmerizing contemporary circus and cultural show at the stunning Saigon Opera House (booking advised).",
-            "id": "day14_evening_0"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 15,
-      "date": "Dec 10, 2025",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast at hotel",
-            "description": "Enjoy your last breakfast in Ho Chi Minh City.",
-            "id": "day15_morning_0"
-          },
-          {
-            "time": "10:00",
-            "activity": "Check-out from hotel",
-            "description": "Complete check-out procedures and ensure all your belongings are packed.",
-            "id": "day15_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "12:00",
-            "activity": "Transfer to Tan Son Nhat International Airport (SGN)",
-            "description": "Your private car will take you to the airport for your departure.",
-            "id": "day15_afternoon_0"
-          }
-        ],
-        "evening": []
       }
     }
   ],
   "additionalActivities": [
     {
       "id": "extra_activity_0",
-      "activity": "Visit the FITO Museum (Museum of Traditional Vietnamese Medicine)",
-      "description": "Explore the fascinating history and practice of traditional Vietnamese medicine.",
-      "duration": "1-2 hours",
+      "activity": "Ghibli Museum (Mitaka)",
+      "description": "Enter the magical world of Studio Ghibli. Tickets must be purchased in advance, often months ahead, and cannot be bought at the museum.",
+      "duration": "2-3 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_1",
-      "activity": "Take a Vietnamese Cooking Class",
-      "description": "Learn to prepare authentic Vietnamese dishes and enjoy your creations for lunch.",
-      "duration": "3-4 hours",
+      "activity": "teamLab Planets TOKYO (Toyosu)",
+      "description": "Immerse yourself in a spectacular digital art museum that challenges perceptions and engages all senses. Advance booking highly recommended.",
+      "duration": "1.5-2 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_2",
-      "activity": "Attend a traditional Vietnamese water puppet show",
-      "description": "Experience this unique art form depicting rural life and folklore.",
-      "duration": "1 hour (show) + travel",
+      "activity": "Akihabara Electric Town",
+      "description": "Explore the vibrant hub of anime, manga, electronics, and gaming culture. Great for unique collectibles, themed cafes, and people-watching.",
+      "duration": "2-4 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_3",
-      "activity": "Get a custom-made Ao Dai or suit",
-      "description": "Visit a local tailor for a fitting and create a personalized traditional Vietnamese dress or suit.",
-      "duration": "1-2 visits + tailoring time",
+      "activity": "Roppongi Hills & Tokyo City View",
+      "description": "Visit Roppongi Hills for high-end shopping, art, and dining. Ascend to Tokyo City View for stunning panoramic views of the city, especially at sunset or night.",
+      "duration": "2-3 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_4",
-      "activity": "Explore the 'Cafe Apartments' on Nguyen Hue Street",
-      "description": "Wander through this unique building, housing multiple cafes and boutiques on different floors.",
-      "duration": "1-2 hours",
+      "activity": "Traditional Tea Ceremony Experience",
+      "description": "Participate in an authentic Japanese tea ceremony, learning about its rich history, rituals, and meditative practice in a serene setting.",
+      "duration": "1-1.5 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_5",
-      "activity": "Indulge in a Vietnamese massage or spa treatment",
-      "description": "Relax and rejuvenate with a therapeutic massage or spa session.",
-      "duration": "1-2 hours",
+      "activity": "Tokyo Dome City",
+      "description": "An exciting entertainment complex featuring an amusement park with thrilling rides, a natural hot spring spa (LaQua), shops, and restaurants. Fun for all ages.",
+      "duration": "3-5 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_6",
-      "activity": "Visit St. Francis Xavier Parish Church in District 5",
-      "description": "Discover this beautiful old church with historical significance in the heart of Chinatown.",
-      "duration": "1 hour",
+      "activity": "Day Trip to Hakone (Mount Fuji views)",
+      "description": "Take a scenic drive to Hakone for stunning views of Mount Fuji (weather permitting), relaxing hot springs (onsen), a picturesque cruise on Lake Ashi, and an open-air art museum.",
+      "duration": "Full Day",
       "type": "additional"
     },
     {
       "id": "extra_activity_7",
-      "activity": "Walk around Tao Dan Park and observe local life",
-      "description": "Enjoy a peaceful stroll in one of the city's largest green spaces, observing locals doing tai chi, playing chess, and exercising.",
+      "activity": "Kappabashi-dori (Kitchenware Street)",
+      "description": "Discover a unique street lined with shops selling everything related to restaurant supplies, from incredibly realistic food samples to professional kitchen knives and exquisite tableware.",
       "duration": "1-2 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_8",
-      "activity": "Go on a photography tour of hidden alleys",
-      "description": "Explore Ho Chi Minh City's charming hidden alleys and discover unique photo opportunities with a local guide.",
-      "duration": "2-3 hours",
+      "activity": "Sumo Practice Viewing (Ryogoku)",
+      "description": "If available and with prior arrangements, witness a morning sumo practice at a sumo stable in Ryogoku, the heart of sumo culture. Requires careful planning and respect for traditions.",
+      "duration": "1.5-2 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_9",
-      "activity": "Enjoy a Craft Beer Tasting Tour",
-      "description": "Explore the burgeoning craft beer scene of Ho Chi Minh City by visiting several local breweries.",
-      "duration": "3-4 hours",
+      "activity": "Cooking Class (e.g., Sushi or Ramen)",
+      "description": "Learn to prepare classic Japanese dishes like sushi, ramen, or tempura from a local chef. A delicious, hands-on, and interactive cultural experience.",
+      "duration": "2-3 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_10",
-      "activity": "Visit Tan Dinh Church (Pink Church)",
-      "description": "Marvel at the distinctive pink facade of this beautiful Gothic-Romanesque church.",
-      "duration": "1 hour",
+      "activity": "Nakano Broadway",
+      "description": "A multi-story shopping complex famous for its stores selling manga, anime figures, vintage toys, idol merchandise, and other otaku (fandom) collectibles.",
+      "duration": "2-3 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_11",
-      "activity": "Attend an A O Show at the Opera House",
-      "description": "Witness a captivating blend of acrobatics, dance, and music showcasing Vietnamese culture.",
-      "duration": "1 hour (show) + travel",
-      "type": "additional"
-    },
-    {
-      "id": "extra_activity_12",
-      "activity": "Explore Thu Thiem Tunnel Park",
-      "description": "Visit the modern park on the other side of the Saigon River for scenic views of the city skyline.",
-      "duration": "1-2 hours",
+      "activity": "Sanrio Puroland (Hello Kitty Theme Park)",
+      "description": "A charming indoor theme park dedicated to Hello Kitty and other beloved Sanrio characters, offering parades, shows, and attractions. Perfect for families or fans.",
+      "duration": "4-6 hours",
       "type": "additional"
     }
   ],
   "userInputs": {
-    "destination": "Ho Chi Minh City, Vietnam",
-    "adults": 2,
-    "startDate": "2025-11-26",
-    "endDate": "2025-12-11"
+    "destination": "Tokyo Japan",
+    "adults": 3,
+    "startDate": "2026-05-22",
+    "endDate": "2026-05-29"
   }
 }

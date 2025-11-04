@@ -3,19 +3,22 @@
 A modern, interac### Design Philosophy
 
 ### Backend Architecture
+
 - **Package-Based Organization**: Clean separation of concerns with `__init__.py` controlled imports
 - **Service Layer Pattern**: Core business logic isolated in `itinerary_service.py`
 - **Utility Modules**: Reusable components for geocoding and POI discovery
 - **Data Models**: Structured classes for type safety and validation
 - **Application Factory**: Flask app creation using factory pattern for testability
 
-### Frontend Architecture  
+### Frontend Architecture
+
 - **Global CSS**: Single stylesheet for consistency across all pages
 - **Page-specific JS**: Separate JavaScript files for distinct functionality
 - **Organized Directory Structure**: Clear separation of pages, styles, scripts, and assets
 - **Scalable Architecture**: Easy to add new pages and features
 
 ### Navigation Structure
+
 - **Simple Home Page**: Clean white background with WanderTrip branding
 - **Red Navigation Buttons**: #E54B4B color for consistent branding
 - **Four Main Sections**:
@@ -25,6 +28,7 @@ A modern, interac### Design Philosophy
   - **My Account**: User profile and settings
 
 ### File Organization
+
 - **Global CSS**: Single stylesheet for consistency across all pages
 - **Page-specific JS**: Separate JavaScript files for distinct functionality
 - **Organized Directory Structure**: Clear separation of pages, styles, scripts, and assets
@@ -87,6 +91,7 @@ Itinerary-Planner/
 ## Design Philosophy
 
 ### Navigation Structure
+
 - **Simple Home Page**: Clean white background with WanderTrip branding
 - **Red Navigation Buttons**: #E54B4B color for consistent branding
 - **Four Main Sections**:
@@ -96,6 +101,7 @@ Itinerary-Planner/
   - **My Account**: User profile and settings
 
 ### File Organization
+
 - **Global CSS**: Single stylesheet for consistency across all pages
 - **Page-specific JS**: Separate JavaScript files for distinct functionality
 - **Organized Directory Structure**: Clear separation of pages, styles, scripts, and assets
@@ -127,6 +133,7 @@ OPENTRIPMAP_API_KEY=your_opentripmap_api_key_here
 ```
 
 **Get API Keys:**
+
 - **Gemini API**: Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
 - **OpenTripMap API**: Visit [OpenTripMap](https://opentripmap.io/docs)
 
@@ -144,16 +151,34 @@ This will create `frontend/itinerary_data.json` with AI-generated itinerary data
 
 ### 4. Run the Application
 
+**🚀 Quick Start (Recommended):**
+
+```bash
+# Option 1: Double-click (Windows)
+start-servers.bat
+
+# Option 2: Python launcher (Cross-platform)
+python start-app.py
+
+# Option 3: PowerShell (Windows)
+./start-servers.ps1
+```
+
+**📋 Manual Setup:**
+
 You have two options:
 
 #### Option A: Simple Static Server
+
 ```bash
 cd frontend
 python -m http.server 8000
 ```
+
 Visit: http://localhost:8000/pages/
 
 #### Option B: Full API Server (Recommended)
+
 ```bash
 # Install additional dependencies
 pip install flask flask-cors
@@ -165,6 +190,7 @@ python main.py
 cd frontend
 python -m http.server 8000
 ```
+
 Visit: http://localhost:8000/pages/
 
 ## Usage Guide
@@ -216,7 +242,9 @@ Visit: http://localhost:8000/pages/
 ## Customization Options
 
 ### Modify Destinations
+
 Edit `itinerary.py` variables:
+
 ```python
 destination = "Your City"
 days = 3
@@ -226,11 +254,13 @@ month = "Your Month"
 ```
 
 ### Styling Changes
+
 - Colors: Modify CSS custom properties in `:root`
 - Fonts: Update font imports in HTML head
 - Layout: Adjust grid layouts in CSS
 
 ### API Customization
+
 - Add new endpoints in `app.py`
 - Modify AI prompts in `itinerary.py`
 - Integrate additional APIs for hotels, restaurants, etc.
