@@ -35,29 +35,47 @@ except Exception as e:
     print(f"❌ [ITINERARY_SERVICE] Failed to configure Gemini API: {e}")
 
 
-def build_prompt(destination, days, pace, has_car, pois, month="November"):
+def build_prompt(destination, startDate, endDate, guestCount, pois):
     """
     Build a comprehensive prompt for AI itinerary generation
     
     Args:
         destination (str): Travel destination city
-        days (int): Number of days for the trip
-        pace (str): Travel pace - 'slow', 'moderate', or 'fast'
-        has_car (bool): Whether traveler has a car available
+        startDate (str): Trip start date in YYYY-MM-DD format
+        endDate (str): Trip end date in YYYY-MM-DD format  
+        guestCount (int): Number of guests/travelers
         pois (list): List of points of interest from OpenTripMap
-        month (str): Month of travel
     
     Returns:
         str: Formatted prompt for AI model
     """
-    print(f"🎯 [BUILD_PROMPT] Called with: {destination}, {days} days, {pace} pace, car: {has_car}, month: {month}")
+    # Calculate number of days from dates
+    from datetime import datetime
+    try:
+        start_dt = datetime.strptime(startDate, '%Y-%m-%d')
+        end_dt = datetime.strptime(endDate, '%Y-%m-%d')
+        days = (end_dt - start_dt).days
+        month = start_dt.strftime('%B')
+        formatted_start_date = start_dt.strftime('%b %d, %Y')
+    except ValueError:
+        # Fallback if date parsing fails
+        days = 3
+        month = 'November'
+        formatted_start_date = 'Feb 7, 2025'
+    
+    print(f"🎯 [BUILD_PROMPT] Called with: {destination}, {startDate} to {endDate} ({days} days), {guestCount} guests, month: {month}")
     print(f"🎯 [BUILD_PROMPT] POIs count: {len(pois) if pois else 0}")
     
     poi_list = ", ".join([poi["name"] for poi in pois if poi["name"]])
     print(f"🎯 [BUILD_PROMPT] POI list: {poi_list[:100]}...")
     
+    # Set reasonable defaults for pace and transportation
+    pace = 'moderate'  # Default since not collected from form
+    has_car = True     # Default assumption
+    
     prompt = f"""
     Create a {days}-day travel itinerary for {destination} in {month}.
+    Traveler count: {guestCount} {'person' if guestCount == 1 else 'people'}.
     Traveler pace: {pace}.
     Transportation: {"car" if has_car else "no car, public transit/walking"}.
     Suggested POIs include: {poi_list}.
@@ -66,11 +84,11 @@ def build_prompt(destination, days, pace, has_car, pois, month="November"):
     
     {{
         "destination": "{destination}",
-        "startDate": "Feb 7, 2025",
+        "startDate": "{formatted_start_date}",
         "days": [
             {{
                 "dayNumber": 1,
-                "date": "Feb 7, 2025",
+                "date": "{formatted_start_date}",
                 "periods": {{
                     "morning": [
                         {{
@@ -138,7 +156,30 @@ def generate_itinerary(prompt) -> dict:
     
     try:
         print(f"🤖 [GENERATE_ITINERARY] Creating Gemini model...")
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        
+        # List of available model names to try in order of preference
+        model_names = [
+            "gemini-2.5-flash",
+            "gemini-flash-latest", 
+            "gemini-2.0-flash",
+            "models/gemini-2.5-flash",
+            "models/gemini-flash-latest",
+            "models/gemini-2.0-flash"
+        ]
+        
+        model = None
+        for model_name in model_names:
+            try:
+                print(f"🔄 [GENERATE_ITINERARY] Trying model: {model_name}")
+                model = genai.GenerativeModel(model_name)
+                print(f"✅ [GENERATE_ITINERARY] Successfully created model: {model_name}")
+                break
+            except Exception as e:
+                print(f"⚠️ [GENERATE_ITINERARY] Model {model_name} failed: {e}")
+                continue
+        
+        if model is None:
+            raise Exception("❌ [GENERATE_ITINERARY] All model creation attempts failed")
         
         print(f"🤖 [GENERATE_ITINERARY] Sending request to AI...")
         response = model.generate_content(f"You are a travel itinerary planner. {prompt}")
@@ -197,22 +238,21 @@ def generate_itinerary(prompt) -> dict:
         }
 
 
-def create_itinerary(destination, days=3, pace="moderate", has_car=True, month="November"):
+def create_itinerary(destination, startDate, endDate, guestCount):
     """
     High-level function to create a complete itinerary
     
     Args:
         destination (str): Travel destination
-        days (int): Number of days
-        pace (str): Travel pace
-        has_car (bool): Transportation availability
-        month (str): Month of travel
+        startDate (str): Trip start date in YYYY-MM-DD format
+        endDate (str): Trip end date in YYYY-MM-DD format
+        guestCount (int): Number of guests/travelers
     
     Returns:
         dict: Complete itinerary data
     """
     print(f"🏁 [CREATE_ITINERARY] Starting creation for {destination}")
-    print(f"🏁 [CREATE_ITINERARY] Parameters: {days} days, {pace} pace, car: {has_car}, {month}")
+    print(f"🏁 [CREATE_ITINERARY] Parameters: {startDate} to {endDate}, {guestCount} guests")
     
     # Get location data
     print(f"🏁 [CREATE_ITINERARY] Getting coordinates...")
@@ -226,7 +266,7 @@ def create_itinerary(destination, days=3, pace="moderate", has_car=True, month="
     
     # Build prompt and generate itinerary
     print(f"🏁 [CREATE_ITINERARY] Building prompt...")
-    prompt = build_prompt(destination, days, pace, has_car, pois, month)
+    prompt = build_prompt(destination, startDate, endDate, guestCount, pois)
     
     print(f"🏁 [CREATE_ITINERARY] Generating itinerary...")
     itinerary_data = generate_itinerary(prompt)

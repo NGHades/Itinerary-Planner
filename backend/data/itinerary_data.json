@@ -1,14 +1,740 @@
 {
-  "destination": "Unknown",
-  "startDate": "Nov 03, 2025",
-  "days": [],
-  "additionalActivities": [],
-  "error": "Error generating itinerary: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+  "destination": "Ho Chi Minh City, Vietnam",
+  "startDate": "Nov 26, 2025",
+  "days": [
+    {
+      "dayNumber": 1,
+      "date": "Nov 26, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "09:00",
+            "activity": "Arrival at Tan Son Nhat International Airport (SGN)",
+            "description": "Upon arrival, meet your pre-arranged private car transfer to your hotel. Check-in and freshen up.",
+            "id": "day1_morning_0"
+          },
+          {
+            "time": "11:00",
+            "activity": "Hotel check-in & relax",
+            "description": "Settle into your accommodation and take some time to rest after your journey.",
+            "id": "day1_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "13:00",
+            "activity": "Welcome Lunch at a local restaurant",
+            "description": "Enjoy your first taste of authentic Vietnamese cuisine in a comfortable setting.",
+            "id": "day1_afternoon_0"
+          },
+          {
+            "time": "15:00",
+            "activity": "Explore Nguyen Hue Walking Street",
+            "description": "Take a leisurely stroll along the city's modern pedestrian boulevard, admiring the architecture and street life.",
+            "id": "day1_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner at a rooftop restaurant",
+            "description": "Savor a delightful dinner with panoramic views of the city lights.",
+            "id": "day1_evening_0"
+          },
+          {
+            "time": "21:00",
+            "activity": "Relaxing drink at a sky bar",
+            "description": "Enjoy a nightcap at one of Ho Chi Minh City's vibrant sky bars.",
+            "id": "day1_evening_1"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 2,
+      "date": "Nov 27, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast at hotel",
+            "description": "Start your day with a delicious breakfast.",
+            "id": "day2_morning_0"
+          },
+          {
+            "time": "09:30",
+            "activity": "Visit Reunification Palace (Independence Palace)",
+            "description": "Explore the historic landmark, a symbol of the end of the Vietnam War and the reunification of the country.",
+            "id": "day2_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Lunch at a nearby cafe",
+            "description": "Enjoy a casual lunch in the vicinity of the palace.",
+            "id": "day2_afternoon_0"
+          },
+          {
+            "time": "14:30",
+            "activity": "Explore Notre-Dame Basilica & Saigon Central Post Office",
+            "description": "Visit these iconic French colonial architectural masterpieces, located just across from each other.",
+            "id": "day2_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner near Ben Thanh Market",
+            "description": "Dine at one of the many restaurants offering local specialties around the market.",
+            "id": "day2_evening_0"
+          },
+          {
+            "time": "20:30",
+            "activity": "Stroll through Ben Thanh Night Market",
+            "description": "Experience the bustling atmosphere of the night market, browsing souvenirs and street food stalls.",
+            "id": "day2_evening_1"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 3,
+      "date": "Nov 28, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast at hotel",
+            "description": "Fuel up for a day of exploration.",
+            "id": "day3_morning_0"
+          },
+          {
+            "time": "09:30",
+            "activity": "Visit the War Remnants Museum",
+            "description": "Gain insight into the Vietnam War through poignant exhibits and historical artifacts.",
+            "id": "day3_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Lunch at a traditional Vietnamese restaurant",
+            "description": "Savor authentic Vietnamese dishes in a local eatery.",
+            "id": "day3_afternoon_0"
+          },
+          {
+            "time": "14:30",
+            "activity": "Shopping at Ben Thanh Market (daytime)",
+            "description": "Experience the vibrant daytime market, haggling for goods and sampling local snacks.",
+            "id": "day3_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner and Bitexco Financial Tower Skydeck",
+            "description": "Enjoy dinner followed by breathtaking 360-degree views of the city from the Saigon Skydeck.",
+            "id": "day3_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 4,
+      "date": "Nov 29, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:00",
+            "activity": "Breakfast at hotel",
+            "description": "Energize for a cultural day.",
+            "id": "day4_morning_0"
+          },
+          {
+            "time": "09:00",
+            "activity": "Explore Cholon (Chinatown) - Thien Hau Temple",
+            "description": "Discover the bustling Cholon district, visiting the historic Thien Hau Temple with its intricate architecture.",
+            "id": "day4_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:00",
+            "activity": "Lunch in Cholon",
+            "description": "Taste delicious Chinese-Vietnamese fusion cuisine in Chinatown.",
+            "id": "day4_afternoon_0"
+          },
+          {
+            "time": "14:00",
+            "activity": "Visit Binh Tay Market",
+            "description": "Explore the largest wholesale market in Ho Chi Minh City, offering a vibrant sensory experience.",
+            "id": "day4_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner and Vietnamese Water Puppet Show",
+            "description": "Enjoy dinner followed by a unique traditional Vietnamese water puppet performance.",
+            "id": "day4_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 5,
+      "date": "Nov 30, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast at hotel",
+            "description": "Enjoy a leisurely morning meal.",
+            "id": "day5_morning_0"
+          },
+          {
+            "time": "09:30",
+            "activity": "Visit Ho Chi Minh City Museum",
+            "description": "Learn about the city's history from ancient times to the present day in a beautiful colonial building.",
+            "id": "day5_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Lunch and explore 'Cafe Apartments'",
+            "description": "Dine in one of the unique cafes housed within the historic 'Cafe Apartments' building on Nguyen Hue.",
+            "id": "day5_afternoon_0"
+          },
+          {
+            "time": "15:00",
+            "activity": "Coffee culture experience",
+            "description": "Immerse yourselves in Vietnam's famous coffee culture at a local specialty coffee shop.",
+            "id": "day5_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner in District 1",
+            "description": "Savor a delicious dinner in the bustling heart of the city.",
+            "id": "day5_evening_0"
+          },
+          {
+            "time": "21:00",
+            "activity": "Option to visit Bui Vien Walking Street",
+            "description": "Experience the lively atmosphere of Bui Vien, Ho Chi Minh City's backpacker street (optional, if seeking a vibrant nightlife).",
+            "id": "day5_evening_1"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 6,
+      "date": "Dec 01, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "07:30",
+            "activity": "Breakfast at hotel",
+            "description": "An early start for today's excursion.",
+            "id": "day6_morning_0"
+          },
+          {
+            "time": "08:30",
+            "activity": "Full-day trip to Cu Chi Tunnels",
+            "description": "Travel by private car to explore the fascinating underground network used by Viet Cong soldiers during the war.",
+            "id": "day6_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "13:00",
+            "activity": "Lunch near Cu Chi Tunnels",
+            "description": "Enjoy a local lunch after your tunnel exploration.",
+            "id": "day6_afternoon_0"
+          },
+          {
+            "time": "14:30",
+            "activity": "Return transfer to Ho Chi Minh City",
+            "description": "Relax in your private car as you head back to the city.",
+            "id": "day6_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Relaxing dinner in District 3",
+            "description": "Enjoy a quieter dinner in a less touristy but equally charming district.",
+            "id": "day6_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 7,
+      "date": "Dec 02, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast at hotel",
+            "description": "Enjoy a relaxed breakfast.",
+            "id": "day7_morning_0"
+          },
+          {
+            "time": "09:30",
+            "activity": "Vietnamese Cooking Class",
+            "description": "Learn to prepare traditional Vietnamese dishes from a local chef, often including a market visit.",
+            "id": "day7_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "13:00",
+            "activity": "Enjoy your self-cooked lunch",
+            "description": "Taste the fruits of your labor during the cooking class.",
+            "id": "day7_afternoon_0"
+          },
+          {
+            "time": "15:00",
+            "activity": "Spa and Relaxation",
+            "description": "Indulge in a traditional Vietnamese massage or spa treatment to unwind.",
+            "id": "day7_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner at a specialty restaurant",
+            "description": "Try a restaurant known for a particular Vietnamese dish, like Banh Xeo or Pho.",
+            "id": "day7_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 8,
+      "date": "Dec 03, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast at hotel",
+            "description": "Enjoy your morning meal.",
+            "id": "day8_morning_0"
+          },
+          {
+            "time": "09:30",
+            "activity": "Visit Jade Emperor Pagoda",
+            "description": "Explore one of Ho Chi Minh City's most atmospheric temples, adorned with intricate wood carvings.",
+            "id": "day8_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Lunch at a vegan/vegetarian restaurant",
+            "description": "Discover the delicious vegetarian options popular in Vietnam, especially around temples.",
+            "id": "day8_afternoon_0"
+          },
+          {
+            "time": "14:30",
+            "activity": "Explore the Fine Arts Museum",
+            "description": "Housed in a beautiful colonial mansion, admire a collection of Vietnamese art.",
+            "id": "day8_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner and live music experience",
+            "description": "Enjoy dinner at a restaurant offering local or international cuisine, followed by live music at a stylish bar.",
+            "id": "day8_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 9,
+      "date": "Dec 04, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "07:30",
+            "activity": "Breakfast at hotel",
+            "description": "An early start for your Mekong Delta adventure.",
+            "id": "day9_morning_0"
+          },
+          {
+            "time": "08:30",
+            "activity": "Full-day Mekong Delta Tour (My Tho/Ben Tre)",
+            "description": "Embark on a private tour to the lush Mekong Delta, cruising through canals, visiting local workshops, and experiencing rural life.",
+            "id": "day9_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "13:00",
+            "activity": "Lunch on the Mekong Delta",
+            "description": "Enjoy a fresh seafood or local specialty lunch during your tour.",
+            "id": "day9_afternoon_0"
+          },
+          {
+            "time": "16:00",
+            "activity": "Return transfer to Ho Chi Minh City",
+            "description": "Relax during the drive back to the city after a day of exploration.",
+            "id": "day9_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:30",
+            "activity": "Casual dinner in District 1",
+            "description": "Grab a relaxed dinner after your busy day, perhaps some street food or a casual eatery.",
+            "id": "day9_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 10,
+      "date": "Dec 05, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "09:00",
+            "activity": "Breakfast at hotel",
+            "description": "Enjoy a slightly later breakfast.",
+            "id": "day10_morning_0"
+          },
+          {
+            "time": "10:00",
+            "activity": "Explore District 2 (Thao Dien)",
+            "description": "Visit the modern, expat-friendly neighborhood of Thao Dien, known for its trendy cafes, boutiques, and galleries.",
+            "id": "day10_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Lunch at a chic cafe in Thao Dien",
+            "description": "Experience a different culinary scene with international or fusion options.",
+            "id": "day10_afternoon_0"
+          },
+          {
+            "time": "14:30",
+            "activity": "Art gallery hopping or boutique shopping in Thao Dien",
+            "description": "Discover local art and unique fashion items.",
+            "id": "day10_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner at a riverside restaurant in District 2",
+            "description": "Enjoy a peaceful dinner with views overlooking the Saigon River.",
+            "id": "day10_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 11,
+      "date": "Dec 06, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast at hotel",
+            "description": "Enjoy your morning meal.",
+            "id": "day11_morning_0"
+          },
+          {
+            "time": "09:30",
+            "activity": "Visit FITO Museum (Museum of Traditional Vietnamese Medicine)",
+            "description": "Learn about the history and practice of traditional Vietnamese medicine through fascinating exhibits.",
+            "id": "day11_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Lunch at a local eatery",
+            "description": "Savor authentic Vietnamese dishes.",
+            "id": "day11_afternoon_0"
+          },
+          {
+            "time": "14:30",
+            "activity": "Explore Tan Dinh Church (Pink Church)",
+            "description": "Visit the uniquely pink-painted Tan Dinh Church for its architectural beauty and photographic appeal.",
+            "id": "day11_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "18:30",
+            "activity": "Guided Street Food Tour",
+            "description": "Embark on a culinary adventure, sampling a variety of delicious Vietnamese street foods with a local guide.",
+            "id": "day11_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 12,
+      "date": "Dec 07, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "09:00",
+            "activity": "Breakfast at hotel",
+            "description": "A relaxing start to the day.",
+            "id": "day12_morning_0"
+          },
+          {
+            "time": "10:00",
+            "activity": "Shopping for souvenirs and local crafts",
+            "description": "Browse for unique gifts and handmade items in boutiques or craft stores.",
+            "id": "day12_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "13:00",
+            "activity": "Lunch at a favorite spot or new discovery",
+            "description": "Revisit a beloved restaurant or try a new place that caught your eye.",
+            "id": "day12_afternoon_0"
+          },
+          {
+            "time": "15:00",
+            "activity": "Leisure time / Relax by the pool",
+            "description": "Enjoy some downtime, perhaps by the hotel pool or with a good book.",
+            "id": "day12_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Saigon River Cruise with dinner",
+            "description": "Enjoy a romantic dinner cruise along the Saigon River, taking in the city's illuminated skyline.",
+            "id": "day12_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 13,
+      "date": "Dec 08, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "09:00",
+            "activity": "Breakfast at hotel",
+            "description": "Enjoy your morning meal.",
+            "id": "day13_morning_0"
+          },
+          {
+            "time": "10:00",
+            "activity": "Visit a local wet market (e.g., Tan Dinh Market)",
+            "description": "Experience the authentic sights, sounds, and smells of a traditional Vietnamese market.",
+            "id": "day13_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:30",
+            "activity": "Lunch at a hidden gem restaurant",
+            "description": "Seek out a highly-rated, lesser-known local restaurant for lunch.",
+            "id": "day13_afternoon_0"
+          },
+          {
+            "time": "14:30",
+            "activity": "Explore Tao Dan Park and observe local life",
+            "description": "Take a relaxing walk through one of the city's largest parks, watching locals exercise, socialize, and play traditional games.",
+            "id": "day13_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Dinner at a high-end Vietnamese restaurant",
+            "description": "Indulge in an exquisite farewell dinner, celebrating your trip with refined Vietnamese cuisine.",
+            "id": "day13_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 14,
+      "date": "Dec 09, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "09:00",
+            "activity": "Breakfast at hotel",
+            "description": "Enjoy your final full breakfast in Ho Chi Minh City.",
+            "id": "day14_morning_0"
+          },
+          {
+            "time": "10:00",
+            "activity": "Free time for last-minute shopping or revisiting a favorite spot",
+            "description": "Use this time to pick up any forgotten souvenirs or enjoy a final moment at a cherished location.",
+            "id": "day14_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "13:00",
+            "activity": "Leisurely lunch at a cafe",
+            "description": "Enjoy a relaxed lunch, perhaps reflecting on your journey.",
+            "id": "day14_afternoon_0"
+          },
+          {
+            "time": "15:00",
+            "activity": "Relax or get a final coffee at a unique cafe",
+            "description": "Savor a final Vietnamese coffee or find a cozy spot to relax before the evening.",
+            "id": "day14_afternoon_1"
+          }
+        ],
+        "evening": [
+          {
+            "time": "19:00",
+            "activity": "Attend an A O Show at the Opera House",
+            "description": "Experience a mesmerizing contemporary circus and cultural show at the stunning Saigon Opera House (booking advised).",
+            "id": "day14_evening_0"
+          }
+        ]
+      }
+    },
+    {
+      "dayNumber": 15,
+      "date": "Dec 10, 2025",
+      "periods": {
+        "morning": [
+          {
+            "time": "09:00",
+            "activity": "Breakfast at hotel",
+            "description": "Enjoy your last breakfast in Ho Chi Minh City.",
+            "id": "day15_morning_0"
+          },
+          {
+            "time": "10:00",
+            "activity": "Check-out from hotel",
+            "description": "Complete check-out procedures and ensure all your belongings are packed.",
+            "id": "day15_morning_1"
+          }
+        ],
+        "afternoon": [
+          {
+            "time": "12:00",
+            "activity": "Transfer to Tan Son Nhat International Airport (SGN)",
+            "description": "Your private car will take you to the airport for your departure.",
+            "id": "day15_afternoon_0"
+          }
+        ],
+        "evening": []
+      }
+    }
+  ],
+  "additionalActivities": [
+    {
+      "id": "extra_activity_0",
+      "activity": "Visit the FITO Museum (Museum of Traditional Vietnamese Medicine)",
+      "description": "Explore the fascinating history and practice of traditional Vietnamese medicine.",
+      "duration": "1-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_1",
+      "activity": "Take a Vietnamese Cooking Class",
+      "description": "Learn to prepare authentic Vietnamese dishes and enjoy your creations for lunch.",
+      "duration": "3-4 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_2",
+      "activity": "Attend a traditional Vietnamese water puppet show",
+      "description": "Experience this unique art form depicting rural life and folklore.",
+      "duration": "1 hour (show) + travel",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_3",
+      "activity": "Get a custom-made Ao Dai or suit",
+      "description": "Visit a local tailor for a fitting and create a personalized traditional Vietnamese dress or suit.",
+      "duration": "1-2 visits + tailoring time",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_4",
+      "activity": "Explore the 'Cafe Apartments' on Nguyen Hue Street",
+      "description": "Wander through this unique building, housing multiple cafes and boutiques on different floors.",
+      "duration": "1-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_5",
+      "activity": "Indulge in a Vietnamese massage or spa treatment",
+      "description": "Relax and rejuvenate with a therapeutic massage or spa session.",
+      "duration": "1-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_6",
+      "activity": "Visit St. Francis Xavier Parish Church in District 5",
+      "description": "Discover this beautiful old church with historical significance in the heart of Chinatown.",
+      "duration": "1 hour",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_7",
+      "activity": "Walk around Tao Dan Park and observe local life",
+      "description": "Enjoy a peaceful stroll in one of the city's largest green spaces, observing locals doing tai chi, playing chess, and exercising.",
+      "duration": "1-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_8",
+      "activity": "Go on a photography tour of hidden alleys",
+      "description": "Explore Ho Chi Minh City's charming hidden alleys and discover unique photo opportunities with a local guide.",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_9",
+      "activity": "Enjoy a Craft Beer Tasting Tour",
+      "description": "Explore the burgeoning craft beer scene of Ho Chi Minh City by visiting several local breweries.",
+      "duration": "3-4 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_10",
+      "activity": "Visit Tan Dinh Church (Pink Church)",
+      "description": "Marvel at the distinctive pink facade of this beautiful Gothic-Romanesque church.",
+      "duration": "1 hour",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_11",
+      "activity": "Attend an A O Show at the Opera House",
+      "description": "Witness a captivating blend of acrobatics, dance, and music showcasing Vietnamese culture.",
+      "duration": "1 hour (show) + travel",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_12",
+      "activity": "Explore Thu Thiem Tunnel Park",
+      "description": "Visit the modern park on the other side of the Saigon River for scenic views of the city skyline.",
+      "duration": "1-2 hours",
+      "type": "additional"
+    }
+  ],
   "userInputs": {
-    "destination": "Tokyo, Japan",
-    "days": 3,
-    "adults": 1,
-    "startDate": "2025-11-04",
-    "endDate": "2025-11-07"
+    "destination": "Ho Chi Minh City, Vietnam",
+    "adults": 2,
+    "startDate": "2025-11-26",
+    "endDate": "2025-12-11"
   }
 }

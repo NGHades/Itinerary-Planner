@@ -71,24 +71,6 @@ def create_app():
             
             print(f"🚀 [API_GENERATE] Guests: {adults} adults, Dates: {start_date} to {end_date}")
             
-            # Set reasonable defaults for missing form fields
-            pace = 'moderate'  # Default pace since not collected from form
-            has_car = True     # Default assumption since not collected from form
-            
-            # Determine month from start date if provided
-            if start_date:
-                from datetime import datetime
-                try:
-                    date_obj = datetime.strptime(start_date, '%Y-%m-%d')
-                    month = date_obj.strftime('%B')
-                    print(f"🚀 [API_GENERATE] Derived month: {month}")
-                except ValueError:
-                    month = 'November'  # Fallback
-                    print(f"🚀 [API_GENERATE] Date parse failed, using fallback month: {month}")
-            else:
-                month = 'November'  # Default fallback
-                print(f"🚀 [API_GENERATE] No date provided, using default month: {month}")
-            
             print(f"🚀 [API_GENERATE] Getting coordinates and POIs...")
             # Get POIs for the destination
             lat, lon = geocode_city(destination)
@@ -97,9 +79,9 @@ def create_app():
             print(f"🚀 [API_GENERATE] Coordinates: {lat}, {lon}")
             print(f"🚀 [API_GENERATE] POIs found: {len(pois) if pois else 0}")
             
-            # Build prompt and generate itinerary (using month derived from actual dates)
+            # Build prompt and generate itinerary using new parameter structure
             print(f"🚀 [API_GENERATE] Building prompt and generating itinerary...")
-            prompt = build_prompt(destination, days, pace, has_car, pois, month)
+            prompt = build_prompt(destination, start_date, end_date, adults, pois)
             itinerary_json = generate_itinerary(prompt)
             
             print(f"🚀 [API_GENERATE] ✅ Itinerary generated!")
@@ -109,7 +91,6 @@ def create_app():
             # Add the actual user input data to the response
             itinerary_json['userInputs'] = {
                 'destination': destination,
-                'days': days,
                 'adults': adults,
                 'startDate': start_date,
                 'endDate': end_date

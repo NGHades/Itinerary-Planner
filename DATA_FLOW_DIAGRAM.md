@@ -106,14 +106,13 @@ pois = get_pois(lat, lon)
 
 **File:** `backend/itinerary_service.py`
 
-**Function:** `build_prompt(destination, days, pace, has_car, pois, month)`
+**Function:** `build_prompt(destination, startDate, endDate, guestCount, pois)`
 
 **Prompt Structure:**
 
 ```
 Create a {days}-day travel itinerary for {destination} in {month}.
-Traveler pace: {pace}.
-Transportation: {"car" if has_car else "no car, public transit/walking"}.
+Traveler count: {guestCount} people.
 Suggested POIs include: {poi_list}.
 
 IMPORTANT: Return your response as a valid JSON object with the following structure:

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchBtn = document.querySelector(".search-button");
     const originalText = searchBtn.textContent;
     searchBtn.textContent = "Planning...";
-    searchBtn.disabled = true;
+    searchBtn.disabled = false;
 
     // Calculate trip duration from dates
     const tripStartDate = new Date(searchData.startDate);
