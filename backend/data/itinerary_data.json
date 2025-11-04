@@ -1,50 +1,56 @@
 {
-  "destination": "Tokyo Japan",
-  "startDate": "May 22, 2026",
+  "destination": "Tokyo, Japan",
+  "startDate": "Nov 05, 2025",
   "days": [
     {
       "dayNumber": 1,
-      "date": "May 22, 2026",
+      "date": "Nov 05, 2025",
       "periods": {
         "morning": [
           {
-            "time": "09:00",
-            "activity": "Arrival, Car Pickup & Hotel Check-in",
-            "description": "Arrive at Narita (NRT) or Haneda (HND) airport, pick up your rental car, and drive to your accommodation in Tokyo. Settle in and freshen up after your journey.",
+            "time": "08:00",
+            "activity": "Breakfast and hotel departure",
+            "description": "Start your day with a delicious breakfast, fueling up for a day of exploration. Pack essentials and prepare for a moderate pace.",
             "id": "day1_morning_0"
           },
           {
-            "time": "11:30",
-            "activity": "Explore Senso-ji Temple & Nakamise-dori (Asakusa)",
-            "description": "Drive to Asakusa, one of Tokyo's most traditional districts. Immerse yourselves in the spiritual ambiance of Senso-ji, Tokyo's oldest temple, and stroll along Nakamise-dori, a bustling market street leading to the temple, perfect for traditional snacks and souvenirs.",
+            "time": "09:30",
+            "activity": "Senso-ji Temple & Nakamise-dori",
+            "description": "Drive to Asakusa and park your car. Immerse yourselves in Tokyo's oldest temple, Senso-ji, and stroll through the bustling Nakamise-dori market street, filled with traditional snacks and souvenirs.",
             "id": "day1_morning_1"
+          },
+          {
+            "time": "11:30",
+            "activity": "Tokyo Skytree",
+            "description": "A short drive or walk from Senso-ji, head to the Tokyo Skytree. Ascend to one of the observation decks for breathtaking panoramic views of the city.",
+            "id": "day1_morning_2"
           }
         ],
         "afternoon": [
           {
-            "time": "13:30",
-            "activity": "Lunch in Asakusa",
-            "description": "Enjoy a delicious traditional Japanese lunch in the charming Asakusa area, perhaps sampling some local tempura or a hearty soba dish.",
+            "time": "13:00",
+            "activity": "Lunch in Asakusa/Skytree area",
+            "description": "Enjoy a traditional Japanese lunch in the vibrant Asakusa area, choosing from a variety of local eateries.",
             "id": "day1_afternoon_0"
           },
           {
-            "time": "15:00",
-            "activity": "Visit Tokyo Skytree",
-            "description": "Drive to the impressive Tokyo Skytree, a prominent landmark. Ascend to one of its observation decks (Tembo Deck or Tembo Galleria) for breathtaking 360-degree panoramic views of Tokyo and beyond.",
+            "time": "14:30",
+            "activity": "Ueno Park & Tokyo National Museum",
+            "description": "Drive to Ueno Park. Explore the expansive park grounds, known for its museums, zoo, and greenery. Visit the Tokyo National Museum, Japan's largest museum, to delve into Japanese art and antiquities.",
             "id": "day1_afternoon_1"
           }
         ],
         "evening": [
           {
-            "time": "19:00",
-            "activity": "Dinner near Skytree/Asakusa",
-            "description": "Indulge in dinner at a restaurant with scenic views of the illuminated Skytree or explore the vibrant evening atmosphere of Asakusa's local eateries.",
+            "time": "18:30",
+            "activity": "Dinner in Ginza",
+            "description": "Drive to the upscale Ginza district. Indulge in a sophisticated dinner experience at one of Ginza's renowned restaurants.",
             "id": "day1_evening_0"
           },
           {
-            "time": "21:00",
-            "activity": "Return to Hotel & Relax",
-            "description": "Drive back to your hotel for some well-deserved rest, reflecting on your first exciting day in Tokyo.",
+            "time": "20:00",
+            "activity": "Ginza District Evening Stroll",
+            "description": "After dinner, enjoy a leisurely stroll through Ginza. Marvel at the brilliantly lit luxury boutiques, department stores, and modern architecture.",
             "id": "day1_evening_1"
           }
         ]
@@ -52,276 +58,54 @@
     },
     {
       "dayNumber": 2,
-      "date": "May 23, 2026",
+      "date": "Nov 06, 2025",
       "periods": {
         "morning": [
           {
-            "time": "09:00",
-            "activity": "Breakfast and drive to Ueno",
-            "description": "Start your day with a satisfying breakfast at your hotel, then drive north to the cultural hub of Ueno.",
+            "time": "07:30",
+            "activity": "Breakfast and hotel departure",
+            "description": "Enjoy an early breakfast to make the most of your second day.",
             "id": "day2_morning_0"
           },
           {
-            "time": "10:00",
-            "activity": "Explore Ueno Park & Tokyo National Museum",
-            "description": "Spend the morning at Ueno Park, a vast oasis home to numerous cultural institutions. Visit the Tokyo National Museum, Japan's largest and oldest museum, housing an extensive collection of Japanese and Asian art and artifacts.",
+            "time": "09:00",
+            "activity": "Tsukiji Outer Market",
+            "description": "Drive to Tsukiji Outer Market. Immerse yourselves in the bustling atmosphere, sample fresh seafood, and explore various food stalls and kitchenware shops.",
             "id": "day2_morning_1"
+          },
+          {
+            "time": "11:00",
+            "activity": "Imperial Palace East Garden",
+            "description": "A short drive from Tsukiji, visit the serene Imperial Palace East Garden, part of the former Edo Castle grounds. Enjoy a peaceful walk through historical landscapes.",
+            "id": "day2_morning_2"
           }
         ],
         "afternoon": [
           {
             "time": "13:00",
-            "activity": "Lunch in Ueno",
-            "description": "Enjoy lunch at one of the many cafes or restaurants conveniently located within or around Ueno Park.",
+            "activity": "Lunch near Imperial Palace / move towards Harajuku",
+            "description": "Have lunch in the vicinity of the Imperial Palace or drive towards Harajuku for more dining options.",
             "id": "day2_afternoon_0"
           },
           {
-            "time": "14:30",
-            "activity": "Ueno Zoo or other museums (Optional)",
-            "description": "Choose to visit the Ueno Zoo, famous for its giant pandas, or explore another of Ueno Park's esteemed museums, such as the National Museum of Western Art or the Tokyo Metropolitan Art Museum.",
+            "time": "15:00",
+            "activity": "Meiji Jingu Shrine & Harajuku",
+            "description": "Drive to Harajuku. Begin with a visit to the tranquil Meiji Jingu Shrine, dedicated to Emperor Meiji and Empress Shoken. Afterwards, explore the vibrant and quirky Takeshita Street and the trendy shops of Harajuku.",
             "id": "day2_afternoon_1"
           }
         ],
         "evening": [
           {
-            "time": "18:00",
-            "activity": "Drive to Ginza District",
-            "description": "Head south to the sophisticated and upscale Ginza district for an evening of luxury and refined experiences.",
+            "time": "19:00",
+            "activity": "Dinner in Shibuya",
+            "description": "Drive to Shibuya. Enjoy dinner at one of Shibuya's many diverse restaurants, ranging from casual to upscale.",
             "id": "day2_evening_0"
           },
           {
-            "time": "19:00",
-            "activity": "Dinner & Evening Stroll in Ginza",
-            "description": "Experience Ginza's renowned dining scene, offering everything from Michelin-starred restaurants to elegant department store eateries. Afterwards, take an enchanting evening stroll to admire the district's illuminated storefronts and iconic architecture.",
+            "time": "20:30",
+            "activity": "Shibuya Crossing & Hachiko Statue",
+            "description": "Experience the iconic Shibuya Crossing, one of the busiest intersections in the world. Take photos and soak in the electric atmosphere, and visit the famous Hachiko statue.",
             "id": "day2_evening_1"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 3,
-      "date": "May 24, 2026",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast and drive to Harajuku",
-            "description": "Enjoy breakfast before driving to the vibrant and youthful Harajuku district.",
-            "id": "day3_morning_0"
-          },
-          {
-            "time": "10:00",
-            "activity": "Visit Meiji Jingu Shrine & Yoyogi Park",
-            "description": "Discover the tranquil beauty of Meiji Jingu Shrine, a majestic Shinto shrine dedicated to Emperor Meiji and Empress Shoken. Enjoy a peaceful walk through the surrounding forested grounds of Yoyogi Park.",
-            "id": "day3_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "12:30",
-            "activity": "Lunch and explore Harajuku",
-            "description": "Grab a fun, casual lunch in Harajuku. Then, dive into the colorful and quirky street culture of Takeshita Street and browse the high-fashion boutiques of Omotesando, often called Tokyo's Champs-\u00c9lys\u00e9es.",
-            "id": "day3_afternoon_0"
-          },
-          {
-            "time": "15:30",
-            "activity": "Drive to Shibuya & Shibuya Crossing",
-            "description": "Head over to the bustling Shibuya district. Experience the iconic Shibuya Crossing, one of the world's busiest intersections, and find the famous Hachiko statue, a symbol of loyalty.",
-            "id": "day3_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "18:30",
-            "activity": "Dinner in Shibuya",
-            "description": "Enjoy dinner at one of Shibuya's incredibly diverse restaurants, ranging from lively izakayas to modern dining experiences.",
-            "id": "day3_evening_0"
-          },
-          {
-            "time": "20:00",
-            "activity": "Explore Shibuya Nightlife (Optional)",
-            "description": "Optionally, explore the energetic nightlife of Shibuya, with its myriad of illuminated shops, bars, and entertainment venues.",
-            "id": "day3_evening_1"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 4,
-      "date": "May 25, 2026",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast and drive to Imperial Palace",
-            "description": "Have a leisurely breakfast before driving towards the historic heart of Tokyo.",
-            "id": "day4_morning_0"
-          },
-          {
-            "time": "10:00",
-            "activity": "Visit Imperial Palace East Garden",
-            "description": "Explore the serene and beautifully maintained East Garden of the Imperial Palace, the former site of Edo Castle. Enjoy a peaceful walk among historical remnants and lush greenery. View the famous Nijubashi Bridge from outside the palace grounds.",
-            "id": "day4_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "13:00",
-            "activity": "Lunch near Tokyo Station",
-            "description": "Enjoy lunch at one of the numerous high-quality dining options located around the grand Tokyo Station area.",
-            "id": "day4_afternoon_0"
-          },
-          {
-            "time": "14:30",
-            "activity": "Shopping and Exploration in Ginza",
-            "description": "Return to Ginza for some dedicated retail therapy. Explore high-end department stores like Mitsukoshi and Ginza Six, browse international flagship stores, and admire the iconic Wako clock tower.",
-            "id": "day4_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "19:00",
-            "activity": "Dinner in Ginza or Yurakucho",
-            "description": "Savor a gourmet dinner experience in Ginza, renowned for its exquisite restaurants, or explore the more lively and casual eateries and izakayas in nearby Yurakucho.",
-            "id": "day4_evening_0"
-          },
-          {
-            "time": "21:00",
-            "activity": "Relax at Hotel",
-            "description": "Head back to your hotel to unwind after a day filled with history and luxurious exploration.",
-            "id": "day4_evening_1"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 5,
-      "date": "May 26, 2026",
-      "periods": {
-        "morning": [
-          {
-            "time": "07:30",
-            "activity": "Early drive to Tsukiji Outer Market",
-            "description": "Start your day early to beat the crowds and drive to the world-famous Tsukiji Outer Market.",
-            "id": "day5_morning_0"
-          },
-          {
-            "time": "08:00",
-            "activity": "Explore Tsukiji Outer Market & Breakfast",
-            "description": "Immerse yourselves in the lively atmosphere of Tsukiji Outer Market. Sample incredibly fresh seafood, various street foods, and enjoy a quintessential sushi breakfast or brunch.",
-            "id": "day5_morning_1"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "11:30",
-            "activity": "Drive to Odaiba",
-            "description": "After your market adventure, drive across the iconic Rainbow Bridge to the futuristic artificial island of Odaiba.",
-            "id": "day5_afternoon_0"
-          },
-          {
-            "time": "13:00",
-            "activity": "Lunch and explore Odaiba",
-            "description": "Have lunch with picturesque waterfront views in Odaiba. Explore attractions like the giant Gundam statue at DiverCity Tokyo Plaza, Aqua City Odaiba, or relax at the waterfront park with stunning views of Tokyo Bay.",
-            "id": "day5_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "18:30",
-            "activity": "Dinner in Odaiba",
-            "description": "Dine in Odaiba, enjoying its diverse culinary offerings, often accompanied by breathtaking nighttime views of the Tokyo skyline and Rainbow Bridge.",
-            "id": "day5_evening_0"
-          },
-          {
-            "time": "20:00",
-            "activity": "Enjoy Odaiba's night views",
-            "description": "Take a leisurely walk along the waterfront to admire the beautifully illuminated Rainbow Bridge, Tokyo Tower, and the replica of the Statue of Liberty.",
-            "id": "day5_evening_1"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 6,
-      "date": "May 27, 2026",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast and drive to Shinjuku",
-            "description": "Enjoy breakfast, then drive to the vibrant and dynamic Shinjuku district.",
-            "id": "day6_morning_0"
-          },
-          {
-            "time": "10:00",
-            "activity": "Visit Shinjuku Gyoen National Garden",
-            "description": "Escape the urban bustle at Shinjuku Gyoen National Garden, a beautifully landscaped park featuring distinct Japanese, English, and French garden styles, perfect for a peaceful morning stroll.",
-            "id": "day6_morning_1"
-          },
-          {
-            "time": "12:00",
-            "activity": "Tokyo Metropolitan Government Building",
-            "description": "Drive to the Tokyo Metropolitan Government Building for complimentary panoramic views of the sprawling city from its observation decks.",
-            "id": "day6_morning_2"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "13:30",
-            "activity": "Lunch in Shinjuku",
-            "description": "Savor a delicious lunch in Shinjuku, a district renowned for its endless and diverse dining options.",
-            "id": "day6_afternoon_0"
-          },
-          {
-            "time": "15:00",
-            "activity": "Explore Yanaka District",
-            "description": "Drive to the charming Yanaka district, one of Tokyo's few remaining 'shitamachi' (old town) areas. Stroll through the nostalgic Yanaka Ginza shopping street, visit ancient temples, and soak in the traditional, relaxed atmosphere.",
-            "id": "day6_afternoon_1"
-          }
-        ],
-        "evening": [
-          {
-            "time": "18:30",
-            "activity": "Dinner in Shinjuku",
-            "description": "Return to Shinjuku for dinner. Consider exploring Shinjuku's unique areas like Golden Gai or Omoide Yokocho (Memory Lane) for an atmospheric experience with tiny, quirky bars and eateries.",
-            "id": "day6_evening_0"
-          },
-          {
-            "time": "20:00",
-            "activity": "Shinjuku night exploration (optional)",
-            "description": "Optionally, enjoy the dazzling neon lights and energetic entertainment of Shinjuku at night, from bustling shopping arcades to vibrant nightlife.",
-            "id": "day6_evening_1"
-          }
-        ]
-      }
-    },
-    {
-      "dayNumber": 7,
-      "date": "May 28, 2026",
-      "periods": {
-        "morning": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast and Last-Minute Souvenir Shopping",
-            "description": "Enjoy a leisurely breakfast at your hotel. Depending on your flight schedule, head out for some last-minute souvenir shopping at a local department store basement (depachika) or revisit a favorite area.",
-            "id": "day7_morning_0"
-          }
-        ],
-        "afternoon": [
-          {
-            "time": "12:30",
-            "activity": "Lunch and Airport Transfer",
-            "description": "Have a final delightful Japanese lunch. Return to the hotel to pick up your luggage, then drive to Narita (NRT) or Haneda (HND) airport, allowing ample time for car return and check-in.",
-            "id": "day7_afternoon_0"
-          }
-        ],
-        "evening": [
-          {
-            "time": "17:00",
-            "activity": "Departure from Tokyo",
-            "description": "Check-in for your flight and depart from Tokyo, carrying wonderful memories of your adventure in Japan.",
-            "id": "day7_evening_0"
           }
         ]
       }
@@ -330,93 +114,114 @@
   "additionalActivities": [
     {
       "id": "extra_activity_0",
-      "activity": "Ghibli Museum (Mitaka)",
-      "description": "Enter the magical world of Studio Ghibli. Tickets must be purchased in advance, often months ahead, and cannot be bought at the museum.",
-      "duration": "2-3 hours",
-      "type": "additional"
-    },
-    {
-      "id": "extra_activity_1",
-      "activity": "teamLab Planets TOKYO (Toyosu)",
-      "description": "Immerse yourself in a spectacular digital art museum that challenges perceptions and engages all senses. Advance booking highly recommended.",
-      "duration": "1.5-2 hours",
-      "type": "additional"
-    },
-    {
-      "id": "extra_activity_2",
-      "activity": "Akihabara Electric Town",
-      "description": "Explore the vibrant hub of anime, manga, electronics, and gaming culture. Great for unique collectibles, themed cafes, and people-watching.",
-      "duration": "2-4 hours",
-      "type": "additional"
-    },
-    {
-      "id": "extra_activity_3",
-      "activity": "Roppongi Hills & Tokyo City View",
-      "description": "Visit Roppongi Hills for high-end shopping, art, and dining. Ascend to Tokyo City View for stunning panoramic views of the city, especially at sunset or night.",
-      "duration": "2-3 hours",
-      "type": "additional"
-    },
-    {
-      "id": "extra_activity_4",
-      "activity": "Traditional Tea Ceremony Experience",
-      "description": "Participate in an authentic Japanese tea ceremony, learning about its rich history, rituals, and meditative practice in a serene setting.",
+      "activity": "Experience a Traditional Japanese Tea Ceremony",
+      "description": "Participate in a serene and authentic tea ceremony to appreciate Japanese culture and hospitality.",
       "duration": "1-1.5 hours",
       "type": "additional"
     },
     {
-      "id": "extra_activity_5",
-      "activity": "Tokyo Dome City",
-      "description": "An exciting entertainment complex featuring an amusement park with thrilling rides, a natural hot spring spa (LaQua), shops, and restaurants. Fun for all ages.",
-      "duration": "3-5 hours",
+      "id": "extra_activity_1",
+      "activity": "Explore Akihabara Electric Town",
+      "description": "Dive into the world of anime, manga, electronics, and gaming in Tokyo's renowned Akihabara district.",
+      "duration": "2-3 hours",
       "type": "additional"
     },
     {
-      "id": "extra_activity_6",
-      "activity": "Day Trip to Hakone (Mount Fuji views)",
-      "description": "Take a scenic drive to Hakone for stunning views of Mount Fuji (weather permitting), relaxing hot springs (onsen), a picturesque cruise on Lake Ashi, and an open-air art museum.",
-      "duration": "Full Day",
-      "type": "additional"
-    },
-    {
-      "id": "extra_activity_7",
-      "activity": "Kappabashi-dori (Kitchenware Street)",
-      "description": "Discover a unique street lined with shops selling everything related to restaurant supplies, from incredibly realistic food samples to professional kitchen knives and exquisite tableware.",
-      "duration": "1-2 hours",
-      "type": "additional"
-    },
-    {
-      "id": "extra_activity_8",
-      "activity": "Sumo Practice Viewing (Ryogoku)",
-      "description": "If available and with prior arrangements, witness a morning sumo practice at a sumo stable in Ryogoku, the heart of sumo culture. Requires careful planning and respect for traditions.",
+      "id": "extra_activity_2",
+      "activity": "Visit Shinjuku Gyoen National Garden",
+      "description": "Find peace and tranquility in this beautiful urban oasis featuring French, English, and traditional Japanese garden styles.",
       "duration": "1.5-2 hours",
       "type": "additional"
     },
     {
-      "id": "extra_activity_9",
-      "activity": "Cooking Class (e.g., Sushi or Ramen)",
-      "description": "Learn to prepare classic Japanese dishes like sushi, ramen, or tempura from a local chef. A delicious, hands-on, and interactive cultural experience.",
+      "id": "extra_activity_3",
+      "activity": "Tokyo Metropolitan Government Building Observatory",
+      "description": "Enjoy free panoramic views of Tokyo from the observatory decks, and on clear days, even catch a glimpse of Mount Fuji.",
+      "duration": "1 hour",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_4",
+      "activity": "Take a Sumida River Cruise",
+      "description": "Enjoy a scenic boat ride along the Sumida River, offering unique perspectives of Tokyo's landmarks from the water.",
+      "duration": "40-60 minutes",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_5",
+      "activity": "Discover Shimokitazawa",
+      "description": "Explore this trendy bohemian neighborhood known for its vintage clothing stores, indie boutiques, and cozy cafes.",
       "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_6",
+      "activity": "Dine at a Themed Restaurant",
+      "description": "Experience Tokyo's quirky side with dinner at a unique themed restaurant, like a 'kawaii' monster cafe or a ninja-themed eatery.",
+      "duration": "1.5-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_7",
+      "activity": "Attend a Japanese Cooking Class",
+      "description": "Learn to prepare classic Japanese dishes like sushi, ramen, or tempura under the guidance of a local chef.",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_8",
+      "activity": "Explore Odaiba's Futuristic Attractions",
+      "description": "Visit the artificial island of Odaiba, home to futuristic architecture, shopping malls, a giant Gundam statue, and leisure facilities.",
+      "duration": "3-4 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_9",
+      "activity": "Visit a Cat Caf\u00e9 or Animal Caf\u00e9",
+      "description": "Enjoy a unique and relaxing experience by spending time with adorable cats, owls, or other animals in a cozy caf\u00e9 setting.",
+      "duration": "1 hour",
       "type": "additional"
     },
     {
       "id": "extra_activity_10",
-      "activity": "Nakano Broadway",
-      "description": "A multi-story shopping complex famous for its stores selling manga, anime figures, vintage toys, idol merchandise, and other otaku (fandom) collectibles.",
-      "duration": "2-3 hours",
+      "activity": "Browse Shinjuku's Shops and Nightlife",
+      "description": "Explore the bustling streets of Shinjuku, known for its massive department stores, vibrant entertainment district (Kabukicho), and charming Golden Gai.",
+      "duration": "2-4 hours",
       "type": "additional"
     },
     {
       "id": "extra_activity_11",
-      "activity": "Sanrio Puroland (Hello Kitty Theme Park)",
-      "description": "A charming indoor theme park dedicated to Hello Kitty and other beloved Sanrio characters, offering parades, shows, and attractions. Perfect for families or fans.",
-      "duration": "4-6 hours",
+      "activity": "Immerse in Art at the Mori Art Museum",
+      "description": "Located atop Roppongi Hills, this contemporary art museum offers impressive exhibitions and stunning city views.",
+      "duration": "1.5-2 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_12",
+      "activity": "Enjoy an Evening at a Local Izakaya",
+      "description": "Experience authentic Japanese casual dining at an Izakaya, where you can enjoy small plates, drinks, and lively conversation.",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_13",
+      "activity": "Visit the Ghibli Museum (Mitaka)",
+      "description": "Step into the magical world of Studio Ghibli. (Note: Requires advance booking, often months ahead).",
+      "duration": "2-3 hours",
+      "type": "additional"
+    },
+    {
+      "id": "extra_activity_14",
+      "activity": "Relax at a Japanese Public Bath (Sento)",
+      "description": "Experience a traditional Japanese public bath, a relaxing way to unwind and soak in local culture.",
+      "duration": "1-1.5 hours",
       "type": "additional"
     }
   ],
   "userInputs": {
-    "destination": "Tokyo Japan",
+    "destination": "Tokyo, Japan",
     "adults": 3,
-    "startDate": "2026-05-22",
-    "endDate": "2026-05-29"
+    "startDate": "2025-11-05",
+    "endDate": "2025-11-07"
   }
 }

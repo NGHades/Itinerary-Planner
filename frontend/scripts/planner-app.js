@@ -52,12 +52,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     localStorage.removeItem("searchData");
   }
 
+  console.log("🚀 Starting app initialization...");
+
   try {
     await loadItineraryData();
+
+    console.log("✅ Data loaded, starting render...");
     renderHeader();
     renderDayCards();
     renderActivitySidebar();
     setupEventListeners();
+    console.log("✅ App initialization completed successfully!");
 
     // Show success message if this is a fresh itinerary
     if (isNewItinerary && itineraryData) {
@@ -67,8 +72,28 @@ document.addEventListener("DOMContentLoaded", async () => {
       );
     }
   } catch (error) {
-    console.error("Failed to initialize app:", error);
-    showError("Failed to load itinerary data. Please try again.");
+    console.error("❌ INITIALIZATION ERROR:", error);
+    console.error("Error stack:", error.stack);
+    console.error("Error occurred during app initialization");
+    console.error("Timestamp:", new Date().toISOString());
+
+    // More specific error handling
+    if (error.message && error.message.includes("fetch")) {
+      console.error("🌐 Network error detected");
+      showError(
+        "[NETWORK] Unable to connect to server. Please make sure the backend is running."
+      );
+    } else if (error.message && error.message.includes("JSON")) {
+      console.error("📄 JSON parsing error detected");
+      showError("[DATA] Invalid data format received. Please try again.");
+    } else {
+      console.error("🔍 Generic error detected");
+      showError(
+        `[INIT] Failed to load itinerary data: ${
+          error.message || "Unknown error"
+        }`
+      );
+    }
   } finally {
     showLoading(false);
   }
@@ -103,17 +128,35 @@ async function loadItineraryData() {
     itineraryData = getSampleData();
     console.log("Sample data loaded:", itineraryData);
   }
-} // Render header information
-function renderHeader() {
-  if (itineraryData) {
-    destinationName.textContent =
-      itineraryData.destination || "Unknown Destination";
+}
 
-    if (itineraryData.days && itineraryData.days.length > 0) {
-      const startDate = itineraryData.startDate || itineraryData.days[0].date;
-      const endDate = itineraryData.days[itineraryData.days.length - 1].date;
-      tripDates.textContent = `${startDate} - ${endDate}`;
+// Render header information
+function renderHeader() {
+  console.log("renderHeader called");
+
+  try {
+    if (!destinationName || !tripDates) {
+      console.error("Header DOM elements not found:", {
+        destinationName,
+        tripDates,
+      });
+      return;
     }
+
+    if (itineraryData) {
+      destinationName.textContent =
+        itineraryData.destination || "Unknown Destination";
+
+      if (itineraryData.days && itineraryData.days.length > 0) {
+        const startDate = itineraryData.startDate || itineraryData.days[0].date;
+        const endDate = itineraryData.days[itineraryData.days.length - 1].date;
+        tripDates.textContent = `${startDate} - ${endDate}`;
+      }
+    }
+    console.log("✅ Header rendered successfully");
+  } catch (error) {
+    console.error("Error in renderHeader:", error);
+    throw error;
   }
 }
 
@@ -123,28 +166,38 @@ function renderDayCards() {
   console.log("itineraryData:", itineraryData);
   console.log("daysGrid element:", daysGrid);
 
-  daysGrid.innerHTML = "";
+  try {
+    if (!daysGrid) {
+      console.error("daysGrid element not found");
+      return;
+    }
 
-  if (!itineraryData) {
-    console.log("No itinerary data available");
-    daysGrid.innerHTML = "<p>No itinerary data available.</p>";
-    return;
+    daysGrid.innerHTML = "";
+
+    if (!itineraryData) {
+      console.log("No itinerary data available");
+      daysGrid.innerHTML = "<p>No itinerary data available.</p>";
+      return;
+    }
+
+    if (!itineraryData.days || itineraryData.days.length === 0) {
+      console.log("No days found in itinerary data");
+      daysGrid.innerHTML = "<p>No days found in itinerary.</p>";
+      return;
+    }
+
+    console.log("Rendering", itineraryData.days.length, "day cards");
+    itineraryData.days.forEach((day, index) => {
+      console.log(`Creating day card ${index + 1}:`, day);
+      const dayCard = createDayCard(day);
+      daysGrid.appendChild(dayCard);
+    });
+
+    console.log("✅ Day cards rendering complete");
+  } catch (error) {
+    console.error("Error in renderDayCards:", error);
+    throw error;
   }
-
-  if (!itineraryData.days || itineraryData.days.length === 0) {
-    console.log("No days found in itinerary data");
-    daysGrid.innerHTML = "<p>No days found in itinerary.</p>";
-    return;
-  }
-
-  console.log("Rendering", itineraryData.days.length, "day cards");
-  itineraryData.days.forEach((day, index) => {
-    console.log(`Creating day card ${index + 1}:`, day);
-    const dayCard = createDayCard(day);
-    daysGrid.appendChild(dayCard);
-  });
-
-  console.log("Day cards rendering complete");
 }
 
 // Create a day card element
@@ -407,24 +460,56 @@ function findActivityById(activityId) {
 
 // Event listeners setup
 function setupEventListeners() {
-  // Modal close
-  document.getElementById("modalClose").addEventListener("click", closeModal);
-  document.getElementById("cancelEdit").addEventListener("click", closeModal);
+  try {
+    console.log("Setting up event listeners...");
 
-  // Form submission
-  activityForm.addEventListener("submit", handleActivitySave);
+    // Check if required elements exist
+    const modalClose = document.getElementById("modalClose");
+    const cancelEdit = document.getElementById("cancelEdit");
+    const deleteActivity = document.getElementById("deleteActivity");
 
-  // Delete button
-  document
-    .getElementById("deleteActivity")
-    .addEventListener("click", handleActivityDelete);
-
-  // Close modal on overlay click
-  activityModal.addEventListener("click", (e) => {
-    if (e.target === activityModal) {
-      closeModal();
+    if (
+      !modalClose ||
+      !cancelEdit ||
+      !deleteActivity ||
+      !activityForm ||
+      !activityModal
+    ) {
+      console.warn("Some modal elements not found:", {
+        modalClose: !!modalClose,
+        cancelEdit: !!cancelEdit,
+        deleteActivity: !!deleteActivity,
+        activityForm: !!activityForm,
+        activityModal: !!activityModal,
+      });
     }
-  });
+
+    // Modal close
+    if (modalClose) modalClose.addEventListener("click", closeModal);
+    if (cancelEdit) cancelEdit.addEventListener("click", closeModal);
+
+    // Form submission
+    if (activityForm)
+      activityForm.addEventListener("submit", handleActivitySave);
+
+    // Delete button
+    if (deleteActivity)
+      deleteActivity.addEventListener("click", handleActivityDelete);
+
+    // Close modal on overlay click
+    if (activityModal) {
+      activityModal.addEventListener("click", (e) => {
+        if (e.target === activityModal) {
+          closeModal();
+        }
+      });
+    }
+
+    console.log("✅ Event listeners setup completed");
+  } catch (error) {
+    console.error("Error in setupEventListeners:", error);
+    throw error;
+  }
 }
 
 function closeModal() {
@@ -504,6 +589,7 @@ function showLoading(show) {
 }
 
 function showError(message) {
+  console.error("🚨 showError called with message:", message);
   showMessage(message, "error");
 }
 
