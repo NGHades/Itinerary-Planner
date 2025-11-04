@@ -296,6 +296,158 @@ body.planner-page {
   transform: translateY(0);
 }
 
+/* ==========================================================================
+   PLANNER PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* Day Cards */
+.day-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.day-header h3 {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.day-date {
+  color: var(--text-medium);
+  font-size: 0.9rem;
+}
+
+.day-activities {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.activity-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  padding: 2rem 1rem;
+  border: 2px dashed var(--border-light);
+  border-radius: 8px;
+  height: 100%;
+}
+
+.add-activity-btn {
+  background-color: var(--teal-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-activity-btn:hover {
+  background-color: var(--teal-hover);
+}
+
+.planned-activity {
+  background: var(--mist);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--teal-primary);
+}
+
+.planned-activity h5 {
+  margin: 0 0 0.25rem 0;
+  color: var(--text-dark);
+}
+
+.planned-activity p {
+  margin: 0;
+  color: var(--text-medium);
+  font-size: 0.9rem;
+}
+
+/* Activity Sidebar */
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.activity-item {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.activity-item:hover {
+  border-color: var(--teal-primary);
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.activity-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.activity-meta {
+  margin: 0 0 0.25rem 0;
+  color: var(--text-medium);
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.activity-price {
+  color: var(--teal-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.add-btn {
+  background-color: var(--teal-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: var(--teal-hover);
+}
+
 /* Under construction message */
 .construction-message {
   display: flex;

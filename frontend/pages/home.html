@@ -33,7 +33,7 @@
       <section class="destination-search">
         <div class="search-container">
           <h2>Choose your Destination</h2>
-          <form class="search-form" action="planner.html" method="get">
+          <form id="searchForm" class="search-form">
             <div class="form-row">
               <div class="form-group destination-group">
                 <label for="destination">Destination</label>
@@ -49,13 +49,13 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="checkin">Check In</label>
-                <input type="date" id="checkin" name="checkin" required />
+                <label for="startDate">Check In</label>
+                <input type="date" id="startDate" name="startDate" required />
               </div>
 
               <div class="form-group">
-                <label for="checkout">Check Out</label>
-                <input type="date" id="checkout" name="checkout" required />
+                <label for="returnDate">Check Out</label>
+                <input type="date" id="returnDate" name="returnDate" required />
               </div>
 
               <div class="form-group">
@@ -82,22 +82,27 @@
     <script>
       // Set minimum date to today for check-in and check-out
       const today = new Date().toISOString().split("T")[0];
-      document.getElementById("checkin").setAttribute("min", today);
-      document.getElementById("checkout").setAttribute("min", today);
+      document.getElementById("startDate").setAttribute("min", today);
+      document.getElementById("returnDate").setAttribute("min", today);
 
       // Update checkout minimum date when check-in changes
       document
-        .getElementById("checkin")
+        .getElementById("startDate")
         .addEventListener("change", function () {
           const checkinDate = this.value;
-          document.getElementById("checkout").setAttribute("min", checkinDate);
+          document
+            .getElementById("returnDate")
+            .setAttribute("min", checkinDate);
 
           // Clear checkout if it's before the new check-in date
-          const checkoutDate = document.getElementById("checkout").value;
+          const checkoutDate = document.getElementById("returnDate").value;
           if (checkoutDate && checkoutDate <= checkinDate) {
-            document.getElementById("checkout").value = "";
+            document.getElementById("returnDate").value = "";
           }
         });
     </script>
+
+    <!-- Include home page JavaScript -->
+    <script src="../scripts/home-app.js"></script>
   </body>
 </html>
