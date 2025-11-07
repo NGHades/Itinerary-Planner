@@ -976,17 +976,20 @@ body.planner-page {
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
+  margin: 0 auto;
 }
 
 .form-group input,
 .form-group textarea {
-  width: 100%;
+  width: 80%;
   padding: 0.75rem;
   border: 1px solid var(--border-medium);
   border-radius: 8px;
   font-family: inherit;
   font-size: 1rem;
   transition: border-color 0.2s ease;
+  margin: 0 auto;
+  display: block;
 }
 
 .form-group input:focus,

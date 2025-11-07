@@ -270,7 +270,6 @@ function createScheduledActivity(activity) {
         <div class="scheduled-activity" data-activity-id="${activity.id}" onclick="editActivity('${activity.id}')">
             <div class="activity-time">${activity.time}</div>
             <div class="activity-name">${activity.activity}</div>
-            <div class="activity-description">${activity.description}</div>
             <div class="activity-actions">
                 <button class="action-btn" onclick="event.stopPropagation(); editActivity('${activity.id}')" title="Edit">
                     ✏️

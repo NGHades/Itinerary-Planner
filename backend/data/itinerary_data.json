@@ -8,12 +8,6 @@
       "periods": {
         "morning": [
           {
-            "time": "08:00",
-            "activity": "Breakfast and hotel departure",
-            "description": "Start your day with a delicious breakfast, fueling up for a day of exploration. Pack essentials and prepare for a moderate pace.",
-            "id": "day1_morning_0"
-          },
-          {
             "time": "09:30",
             "activity": "Senso-ji Temple & Nakamise-dori",
             "description": "Drive to Asakusa and park your car. Immerse yourselves in Tokyo's oldest temple, Senso-ji, and stroll through the bustling Nakamise-dori market street, filled with traditional snacks and souvenirs.",

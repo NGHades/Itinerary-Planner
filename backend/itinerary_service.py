@@ -92,12 +92,6 @@ def build_prompt(destination, startDate, endDate, guestCount, pois):
                 "periods": {{
                     "morning": [
                         {{
-                            "time": "08:00",
-                            "activity": "Breakfast and get ready",
-                            "description": "Start the day with a hearty breakfast",
-                            "id": "day1_morning_0"
-                        }},
-                        {{
                             "time": "10:00",
                             "activity": "Visit Museum",
                             "description": "Explore local history and culture",
@@ -134,7 +128,7 @@ def build_prompt(destination, startDate, endDate, guestCount, pois):
         ]
     }}
     
-    Generate realistic activities with specific times, engaging descriptions, and include 10-15 additional activities that users can drag and drop into their schedule. Make sure the JSON is valid and properly formatted.
+    Generate realistic activities with specific times, engaging descriptions, and include 10-15 additional activities that users can drag and drop into their schedule. Make sure the JSON is valid and properly formatted. Do not have a breakfast and get ready activity.
     """
     
     print(f"🎯 [BUILD_PROMPT] Prompt created (length: {len(prompt)} chars)")
