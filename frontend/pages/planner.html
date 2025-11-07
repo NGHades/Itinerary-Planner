@@ -83,39 +83,69 @@
           </button>
         </div>
         <form id="activityForm" class="modal-form">
-          <div class="form-group">
-            <label for="activityName">Activity Name</label>
-            <input type="text" id="activityName" name="activity" required />
-          </div>
-          <div class="form-group">
-            <label for="activityDescription">Description</label>
-            <textarea
-              id="activityDescription"
-              name="description"
-              rows="3"
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <label for="activityTime">Time</label>
-            <input type="time" id="activityTime" name="time" required />
-          </div>
-          <div class="form-group">
-            <label for="activityDuration">Duration</label>
-            <input
-              type="text"
-              id="activityDuration"
-              name="duration"
-              placeholder="e.g., 1-2 hours"
-            />
-          </div>
-          <div class="modal-actions">
-            <button type="button" id="cancelEdit" class="btn-secondary">
-              Cancel
-            </button>
-            <button type="button" id="deleteActivity" class="btn-danger">
-              Delete
-            </button>
-            <button type="submit" class="btn-primary">Save</button>
+          <div class="modal-body">
+            <div class="modal-form-section">
+              <div class="form-group">
+                <label for="activityName">Activity Name</label>
+                <input type="text" id="activityName" name="activity" required />
+              </div>
+              <div class="form-group">
+                <label for="activityDescription">Description</label>
+                <textarea
+                  id="activityDescription"
+                  name="description"
+                  rows="3"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="activityTime">Time</label>
+                <input type="time" id="activityTime" name="time" required />
+              </div>
+              <div class="form-group">
+                <label for="activityDuration">Duration</label>
+                <input
+                  type="text"
+                  id="activityDuration"
+                  name="duration"
+                  placeholder="e.g., 1-2 hours"
+                />
+                <div class="modal-actions">
+                  <button type="button" id="cancelEdit" class="btn-secondary">
+                    Cancel
+                  </button>
+                  <button type="button" id="deleteActivity" class="btn-danger">
+                    Delete
+                  </button>
+                  <button type="submit" class="btn-primary">Save</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-sidebar">
+              <div class="place-image-container">
+                <img
+                  id="placeImage"
+                  class="place-image"
+                  src=""
+                  alt="Place image"
+                  style="display: none"
+                />
+                <div id="imagePlaceholder" class="image-placeholder">
+                  📷 Loading image...
+                </div>
+              </div>
+
+              <div class="maps-container">
+                <iframe
+                  id="googleMapsEmbed"
+                  class="maps-iframe"
+                  src=""
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
           </div>
         </form>
       </div>

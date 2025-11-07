@@ -1,6 +1,8 @@
 // Global state management
 let itineraryData = null;
 let currentEditingActivity = null;
+let currentImageData = null;
+let currentMapsUrl = null;
 
 // DOM elements (will be initialized after DOM loads)
 let loadingOverlay,
@@ -424,9 +426,132 @@ function editActivity(activityId) {
   document.getElementById("activityTime").value = activity.time;
   document.getElementById("activityName").value = activity.activity;
   document.getElementById("activityDescription").value = activity.description;
+  document.getElementById("activityDuration").value = activity.duration || "";
+
+  // Update Google search links
+  updateGoogleLinks(activity.activity);
 
   // Show modal
   activityModal.classList.add("active");
+}
+
+function updateGoogleLinks(activityName) {
+  // Get current destination from page or URL
+  const currentDestination = getCurrentDestination();
+
+  // Update Google Maps embed
+  updateGoogleMapsEmbed(activityName, currentDestination);
+
+  // Load place image
+  loadPlaceImage(activityName, currentDestination);
+
+  // Set up click handlers for image and map
+  setupClickHandlers(activityName, currentDestination);
+}
+
+function updateGoogleMapsEmbed(activityName, destination) {
+  const mapsEmbed = document.getElementById("googleMapsEmbed");
+  if (mapsEmbed) {
+    const query = encodeURIComponent(`${activityName} ${destination}`);
+    const embedUrl = `https://www.google.com/maps/embed/v1/search?key=YOUR_API_KEY&q=${query}`;
+
+    // For now, use the basic embed without API key (limited functionality)
+    const basicEmbedUrl = `https://maps.google.com/maps?q=${query}&output=embed`;
+    currentMapsUrl = basicEmbedUrl;
+    mapsEmbed.src = basicEmbedUrl;
+  }
+}
+
+function setupClickHandlers(activityName, destination) {
+  const searchQuery = encodeURIComponent(`${activityName} ${destination}`);
+
+  // Store URLs for click handlers
+  window.currentPhotosUrl = `https://www.google.com/search?tbm=isch&q=${searchQuery}`;
+  window.currentMapsSearchUrl = `https://www.google.com/maps/search/${searchQuery}`;
+}
+
+async function loadPlaceImage(activityName, destination) {
+  const placeImage = document.getElementById("placeImage");
+  const imagePlaceholder = document.getElementById("imagePlaceholder");
+
+  if (!placeImage || !imagePlaceholder) return;
+
+  try {
+    // Hide image and show placeholder while loading
+    placeImage.style.display = "none";
+    imagePlaceholder.style.display = "flex";
+    imagePlaceholder.textContent = "🔍 Searching for image...";
+
+    // Use Unsplash API for high-quality images
+    const query = encodeURIComponent(`${activityName} ${destination}`);
+    const unsplashUrl = `https://source.unsplash.com/400x200/?${query}`;
+
+    // Create a new image to test if it loads
+    const testImage = new Image();
+
+    testImage.onload = function () {
+      placeImage.src = unsplashUrl;
+      placeImage.alt = `${activityName} in ${destination}`;
+      placeImage.style.display = "block";
+      imagePlaceholder.style.display = "none";
+
+      // Store current image data
+      currentImageData = {
+        src: unsplashUrl,
+        alt: `${activityName} in ${destination}`,
+      };
+    };
+
+    testImage.onerror = function () {
+      // Fallback: try with just the activity name
+      const fallbackQuery = encodeURIComponent(activityName);
+      const fallbackUrl = `https://source.unsplash.com/400x200/?${fallbackQuery}`;
+
+      const fallbackImage = new Image();
+      fallbackImage.onload = function () {
+        placeImage.src = fallbackUrl;
+        placeImage.alt = activityName;
+        placeImage.style.display = "block";
+        imagePlaceholder.style.display = "none";
+
+        // Store current image data
+        currentImageData = {
+          src: fallbackUrl,
+          alt: activityName,
+        };
+      };
+
+      fallbackImage.onerror = function () {
+        // Final fallback: show placeholder
+        imagePlaceholder.textContent = "📷 No image available";
+      };
+
+      fallbackImage.src = fallbackUrl;
+    };
+
+    testImage.src = unsplashUrl;
+  } catch (error) {
+    console.error("Error loading place image:", error);
+    imagePlaceholder.textContent = "📷 Image unavailable";
+  }
+}
+
+function getCurrentDestination() {
+  // Try to get destination from URL params first
+  const urlParams = new URLSearchParams(window.location.search);
+  const destination = urlParams.get("destination");
+
+  if (destination) {
+    return destination;
+  }
+
+  // Try to get from page title or stored data
+  if (itineraryData && itineraryData.destination) {
+    return itineraryData.destination;
+  }
+
+  // Default fallback
+  return "";
 }
 
 function removeActivity(activityId) {
@@ -494,6 +619,34 @@ function setupEventListeners() {
     // Delete button
     if (deleteActivity)
       deleteActivity.addEventListener("click", handleActivityDelete);
+
+    // Activity name input - update Google links on change
+    const activityNameInput = document.getElementById("activityName");
+    if (activityNameInput) {
+      activityNameInput.addEventListener("input", (e) => {
+        updateGoogleLinks(e.target.value);
+      });
+    }
+
+    // Image container click handler - opens Google Images
+    const imageContainer = document.querySelector(".place-image-container");
+    if (imageContainer) {
+      imageContainer.addEventListener("click", () => {
+        if (window.currentPhotosUrl) {
+          window.open(window.currentPhotosUrl, "_blank");
+        }
+      });
+    }
+
+    // Maps container click handler - opens Google Maps
+    const mapsContainer = document.querySelector(".maps-container");
+    if (mapsContainer) {
+      mapsContainer.addEventListener("click", () => {
+        if (window.currentMapsSearchUrl) {
+          window.open(window.currentMapsSearchUrl, "_blank");
+        }
+      });
+    }
 
     // Close modal on overlay click
     if (activityModal) {
