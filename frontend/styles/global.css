@@ -184,7 +184,8 @@ body.planner-page {
 
 .destination-search {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--white) 0%, var(--mist) 100%);
+  //background: linear-gradient(135deg, var(--white) 0%, var(--blue-accent) 100%);
+  background: var(--blue-accent);
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -493,6 +494,7 @@ body.planner-page {
 /* Header Styles for Planner */
 .app-header {
   background: linear-gradient(135deg, var(--background-card) 0%, #f8f9fa 100%);
+  //background: var(--blue-accent);
   border-bottom: 1px solid var(--border-light);
   padding: 2rem 0;
   box-shadow: 0 2px 8px var(--shadow-light);
@@ -548,7 +550,7 @@ body.planner-page {
   font-weight: 600;
 }
 
-/* Planner Main Content Layout */
+/* Planner "C:\Users\rdnli\Desktop Content Layout */
 .planner-page .main-content {
   max-width: 1400px;
   margin: 0 auto;
@@ -668,13 +670,13 @@ body.planner-page {
   box-shadow: 0 6px 20px var(--shadow-medium);
 }
 
-.day-header {
+/* .day-header {
   background: linear-gradient(135deg, var(--coral), var(--pink));
-  color: white;
+  //color: var(--shadow-medium);
   padding: 1.5rem;
   text-align: center;
   position: relative;
-}
+} */
 
 .day-number {
   font-family: "Playfair Display", serif;
@@ -682,6 +684,7 @@ body.planner-page {
   font-weight: 700;
   margin-bottom: 0.25rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--navy-accent);
 }
 
 .day-date {

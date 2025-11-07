@@ -156,30 +156,7 @@ def generate_itinerary(prompt) -> dict:
     
     try:
         print(f"🤖 [GENERATE_ITINERARY] Creating Gemini model...")
-        
-        # List of available model names to try in order of preference
-        model_names = [
-            "gemini-2.5-flash",
-            "gemini-flash-latest", 
-            "gemini-2.0-flash",
-            "models/gemini-2.5-flash",
-            "models/gemini-flash-latest",
-            "models/gemini-2.0-flash"
-        ]
-        
-        model = None
-        for model_name in model_names:
-            try:
-                print(f"🔄 [GENERATE_ITINERARY] Trying model: {model_name}")
-                model = genai.GenerativeModel(model_name)
-                print(f"✅ [GENERATE_ITINERARY] Successfully created model: {model_name}")
-                break
-            except Exception as e:
-                print(f"⚠️ [GENERATE_ITINERARY] Model {model_name} failed: {e}")
-                continue
-        
-        if model is None:
-            raise Exception("❌ [GENERATE_ITINERARY] All model creation attempts failed")
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         print(f"🤖 [GENERATE_ITINERARY] Sending request to AI...")
         response = model.generate_content(f"You are a travel itinerary planner. {prompt}")
